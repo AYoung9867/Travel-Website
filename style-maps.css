@@ -1,0 +1,36 @@
+body, html {
+	font-family: 'Comfortaa', cursive;
+	height: 100%;
+	margin: 0;
+}
+
+.map-wrapper {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+#EUmap{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%
+	}
+	
+#ASmap{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%
+	}
+	
+#AUmap{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%
+	}
+	

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IF=edge">
+		<title>Erin & Alex's Adventures</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="script.js" defer></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+		<style>@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');</style>
+	</head>
+	<body>
+		<section aria-label="Newest Photos">
+			<div class="carousel" data-carousel>
+				<button class="arrow left" data-carousel-button="prev">
+					<svg viewBox="0 0 50 80" xml:space="preserve">
+						<polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "/>
+					</svg>  
+				</button>
+				<button class="arrow right" data-carousel-button="next">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 80" xml:space="preserve">
+						<polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "/>
+					</svg>
+				</button>
+				<ul data-slides>
+					<li class="slide">
+					  <img src="images\Greece Beach.jpg" alt="Greece Beach">
+					  <div class="coord"><span class="material-symbols-outlined" style="color:red;">location_on</span>38°12'06.2"N 20°44'08.5"E</div>
+					</li>
+					<li class="slide" data-active>
+					  <img src="images\German Mountains.jpg" alt="German Mountains">
+					  <div class="coord"><span class="material-symbols-outlined" style="color:red;">location_on</span>47°33'56.1"N 10°42'01.2"E</div>
+					</li>
+					<li class="slide">
+					  <img src="images\Cyprus Path.jpg" alt="Cyprus Path">
+					  <div class="coord"><span class="material-symbols-outlined" style="color:red;">location_on</span>34°49'19.0"N 32°23'33.3"E</div>
+					</li>
+					<li class="slide">
+					  <img src="images\Glen Etive.jpg" alt="Glen Etive">
+					  <div class="coord"><span class="material-symbols-outlined" style="color:red;">location_on</span>56°34'06.3"N 5°03'19.6"W</div>
+					</li>
+				</ul>
+				<nav>
+					<div class="nav-links">
+						<ul>
+							<li><a href="Home.html">HOME</a>
+							<li><a href="#diary">DIARY</a>
+							<li><a href="Pictures.html">GALLERY</a>
+							<li><a href="Highlights.html">CONTACT US</a>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</section>
+		<section class="below">
+			<div class="outer-container">
+				<div class="flexbox-container-continents">
+					<a class="flexbox-item-1 flexbox-child" href="Map Europe.html"><img class="flexbox-img" src="images\Europe Sketch.png" alt= "Europe Sketch"></a>
+					<a class="flexbox-item-2 flexbox-child" href="Map Asia.html"><img class="flexbox-img" src="images\Asia Sketch.png" alt= "SE Asia Sketch"></a>
+					<a class="flexbox-item-3 flexbox-child" href="Map Australia.html"><img class="flexbox-img" src="images\Australia Sketch.png" alt= "Australia Sketch"></a>
+				</div>
+				<div class="diary-container" id="diary">
+					
+				</div>
+				<div class="flexbox-container-sidebar">
+					<img class="web-title" src="images\logo.v1" alt="Title">
+					<img src="images\Picture of us.jpg" alt="Alex & Erin" style="border-radius:50%;">
+					<p class="intro">This will be a paragraph with a brief overview of us</p>
+					<div class="insta-links">
+						<img class="insta-logo" src="images\Insta Logo.png" alt="Insta Logo" width="50pw">
+						<div class="link-container">
+							<div><a class="erin-insta" href="https://www.instagram.com/erin.power.35/">@erin.power.35</a></div>
+							<div><a class="alex-insta" href="https://www.instagram.com/youngeylad/">@youngeylad</a></div>
+						</div>
+					</div>
+					<div class="tiktok-links">
+						<img class="tiktok-logo" src="images\Tiktok Logo.png" alt="tiktok logo" width="50pw" height="50ph">
+						<div><a class="tiktok-link" href="https://www.tiktok.com/@erinandalex23">@erinandalex23</a></div>
+					</div>
+					<div class="email-links">
+						<img class="email-logo" src="images\Mail Logo.png" alt="mail logo" width="45pw" height="45ph">
+						<p class="email-link">erincayzer06@gmail.com</p>
+					</div>
+					<div class="countries-list">
+						<p style="font-size:30px; text-align: center; color:#565d3f;"> COUNTRIES </p> 
+						<a class="country" href="" style="color:black">Malaysia</a>
+						<a class="country" href="">Thailand</a>
+						<a class="country" href="">Laos</a>
+						<a class="country" href="">Cambodia</a>
+						<a class="country" href="">Vietnam</a>
+						<a class="country" href="">Philippines</a>
+						<a class="country" href="">Singapore</a>
+						<a class="country" href="">Indonesia</a>
+					</div>
+					<div class="months-list">
+						<p style="font-size:30px; text-align: center; color:#565d3f;"> MONTHS </p> 
+						<div class="each-months-container">
+							<div class="diamond"></div><a class="month" href="" style="color:black">January</a><div class="diamond"></div>
+						</div>
+						<a class="month" href="">February</a>
+						<a class="month" href="">March</a>
+						<a class="month" href="">April</a>
+						<a class="month" href="">May</a>
+						<a class="month" href="">June</a>
+						<a class="month" href="">July</a>
+						<a class="month" href="">August</a>
+						<a class="month" href="">September</a>
+						<a class="month" href="">October</a>
+						<a class="month" href="">November</a>
+						<a class="month" href="">December</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
