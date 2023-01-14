@@ -701,7 +701,11 @@ figure {
 	.diary-title {
 		font-size: 30px;
 		color: #8D6B67;
-}
+	}
+	
+	figure {
+		font-size: 8px;
+	}
 }
 
 @media screen and (max-width: 920px) {
