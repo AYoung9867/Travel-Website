@@ -1,25 +1,46 @@
 body {
 	font-family: 'Comfortaa', cursive;
+	margin: 0;
 }
 
-.diamond {
+.diamond-country {
 	width: 0;
 	height: 0;
-	border: 15px solid transparent;
-	border-bottom-color: black;
+	border: 10px solid transparent;
+	border-bottom-color: #565d3f;
 	position: relative;
-	top: -15px;
+	top: -10px;
 }
 
-.diamond:after {
+.diamond-country:after {
 	content: '';
 	position: absolute;
-	left: -15px;
-	top: 15px;
+	left: -10px;
+	top: 10px;
 	width: 0;
 	height: 0;
-	border: 15px solid transparent;
-	border-top-color: black;
+	border: 10px solid transparent;
+	border-top-color: #565d3f;
+}
+
+.diamond-month {
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color: #6d413c;
+	position: relative;
+	top: -10px;
+}
+
+.diamond-month:after {
+	content: '';
+	position: absolute;
+	left: -10px;
+	top: 10px;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: #6d413c;
 }
 
 .coord{
@@ -188,7 +209,7 @@ polyline {
 .below{
 	background-color: #fff4da;
 	width: auto;
-	height: 300vh;
+	height: 800vh;
 	min-width: 0;
 	min-height: 0;
 }
@@ -197,9 +218,53 @@ polyline {
 	min-width: 0;
 	min-height: 0;
 	display: flex;
-	height: 40vh;
-	width: 80%;
-	justify-content: space-around;
+	height: 60vh;
+	justify-content: space-evenly;
+}
+
+.continent-names {
+	display: flex;
+	flex-direction: column;
+	width:26.6666%;
+}
+
+.each-continents-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 1vw;
+	margin-right: 1vw;
+}
+
+.centering-continents {
+	display: flex;
+	justify-content: center;
+	flex-grow: 2;
+}
+
+.continent {
+	font-size: 20px;
+	margin: 10px;
+	color: #565d3f;
+	text-decoration: none;
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+
+.continent::after{
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #ffcf5d;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+	
+.continent:hover::after{
+	width: 100%;
 }
 
 .flexbox-container-sidebar {
@@ -217,6 +282,42 @@ polyline {
 	border-left: 20px solid #fff4da;
 	display: flex;
 	flex-direction: row;
+}
+
+.left-side-container {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+
+.diary-title {
+	font-size: 50px;
+	color: #8D6B67;
+}
+
+.diary-entries {
+	line-height: 1.5;
+}
+
+.diary-container {
+	margin-top: 0px;
+	margin-right: 6%;
+	margin-left: 3%;
+}
+
+.diary-image {
+	width: 100%;
+	position: relative;
+
+}
+
+figure {
+	width: 40%;
+	text-align: center;
+	display: block;	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10vh;
 }
 
 .flexbox-child {
@@ -253,7 +354,7 @@ polyline {
 
 .insta-links {
 	display: flex;
-
+	align-items: center;
 }
 
 .insta-logo {
@@ -279,7 +380,7 @@ polyline {
 }
 
 .email-logo {
-	margin: 5px;
+	margin-top: 5px;
 }
 
 .email-link {
@@ -295,7 +396,7 @@ polyline {
 
 .tiktok-logo {
 	margin: 5px;
-	margin: top: 3px;
+	margin-top: 3px;
 }
 
 .tiktok-link {
@@ -311,6 +412,13 @@ polyline {
 
 .intro {
 	font-size: 20px;
+	text-align: center;
+}
+
+.list-header {
+	font-size:30px; 
+	text-align: center; 
+	color: #111111;
 }
 
 .countries-list {
@@ -320,10 +428,51 @@ polyline {
 	background-color: #c6bf90;
 }
 
+.each-countries-container {
+	display: flex;
+	align-items: center;
+	margin-left: 1vw;
+	margin-right: 1vw;
+}
+
+.centering-country {
+	display: flex;
+	justify-content: center;
+	flex-grow: 2;
+}
+
+.centering-country::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #565d3f;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.centering-country::before {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #565d3f;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.centering-country:hover::before {
+	width: 20%;
+}
+
+.centering-country:hover::after{
+	width: 20%;
+}
+
 .country {
 	font-size: 20px;
-	margin: 10px;  
-	color: #6d413c;
+	margin: 10px;
+	color: #565d3f;
 	text-decoration: none;
 }
 
@@ -335,6 +484,43 @@ polyline {
 
 .each-months-container {
 	display: flex;
+	align-items: center;
+	margin-left: 1vw;
+	margin-right: 1vw;
+}
+
+.centering-month {
+	display: flex;
+	justify-content: center;
+	flex-grow: 2;
+}
+
+.centering-month::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #6d413c;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.centering-month::before {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #6d413c;
+	display: block;
+	margin: auto;
+	transition: 0.5s;
+}
+
+.centering-month:hover::before {
+	width: 20%;
+}
+
+.centering-month:hover::after{
+	width: 20%;
 }
 
 .month {
@@ -344,24 +530,6 @@ polyline {
 	text-decoration: none;
 }
 
-.month::after {
-	content: '';
-	width: 0%;
-	height: 2px;
-	background: red;
-	display: block;
-	margin: auto;
-	transition: 0.5s;
-}
-
-.month:hover::after {
-	width: 100%;
-}
-
-.month:hover {
-  --_p: 100%;
-  --_s: .3s;
-}
 
 @media screen and (max-width: 500px) {
 	.coord{
@@ -370,7 +538,7 @@ polyline {
 	
 	.nav-links{
 	flex:1;
-	text-align: right;
+	text-align: center;
 	z-index: 2;
 	position: absolute;
 	right: 10px;
@@ -396,6 +564,225 @@ polyline {
 
 	.right {
 	left: 94%;
+	}
+	
+	.flexbox-img {
+		width: 180px;
+		height: auto;
+		margin: 0;
+		margin-bottom: 5%;
+	}
+	
+	.flexbox-container-continents {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.left-side-container {
+		width: 60%;
+	}
+	
+	.flexbox-container-sidebar {
+		width: 40%;
+	}
+	
+	.outer-container {
+
+	}
+	
+	.intro {
+		font-size: 13px;
+	}
+	
+	.insta-links {
+		flex-direction: column;
+	}
+	
+	.tiktok-links {
+		flex-direction: column;
+	}
+	
+	.email-links {
+		flex-direction: column;
+	}
+	
+	.erin-insta {
+		font-size: 12px;
+	}
+	
+	.alex-insta {
+		font-size: 12px;
+	}
+	
+	.tiktok-link {
+		font-size: 12px;
+	}
+	
+	.email-link {
+		font-size: 12px;
+	}
+	
+	.list-header {
+		font-size: 15px;
+	}
+	
+	.country {
+		font-size: 10px;
+	}
+	
+	.continent {
+		font-size: 10px;
+	}
+	
+	.month {
+		font-size: 10px;
+	}
+	
+	.diamond-country {
+		width: 0;
+		height: 0;
+		border: 5px solid transparent;
+		border-bottom-color: #565d3f;
+		position: relative;
+		top: -5px;
+	}
+
+	.diamond-country:after {
+		content: '';
+		position: absolute;
+		left: -5px;
+		top: 5px;
+		width: 0;
+		height: 0;
+		border: 5px solid transparent;
+		border-top-color: #565d3f;
+	}
+	
+	.diamond-month {
+		width: 0;
+		height: 0;
+		border: 5px solid transparent;
+		border-bottom-color: #6d413c;
+		position: relative;
+		top: -5px;
+	}
+
+	.diamond-month:after {
+		content: '';
+		position: absolute;
+		left: -5px;
+		top: 5px;
+		width: 0;
+		height: 0;
+		border: 5px solid transparent;
+		border-top-color: #6d413c;
+	}
+	
+	.diary-entries {
+		font-size: 10px;
+	}
+	
+	.left-side-container {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	}
+	
+	.diary-dates {
+		font-size: 15px;
+	}
+
+	.diary-container {
+		margin-top: 25px;
+		margin-right: 10%;
+		margin-left: 3%;
+	}
+	
+	.diary-title {
+		font-size: 30px;
+		color: #8D6B67;
+}
+}
+
+@media screen and (max-width: 920px) {
+	.insta-links {
+		flex-direction: column;
+	}
+	
+	.tiktok-links {
+		flex-direction: column;
+	}
+	
+	.email-links {
+		flex-direction: column;
+	}
+	
+	.erin-insta {
+		font-size: 12px;
+	}
+	
+	.alex-insta {
+		font-size: 12px;
+	}
+	
+	.tiktok-link {
+		font-size: 12px;
+	}
+	
+	.email-link {
+		font-size: 12px;
+	}
+	
+	.list-header {
+		font-size: 18px;
+	}
+	
+	.country {
+		font-size: 13px;
+	}
+	
+	.month {
+		font-size: 13px;
+	}
+	
+	.diamond-country {
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-bottom-color: #565d3f;
+		position: relative;
+		top: -6px;
+	}
+
+	.diamond-country:after {
+		content: '';
+		position: absolute;
+		left: -6px;
+		top: 6px;
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-top-color: #565d3f;
+	}
+	
+	.diamond-month {
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-bottom-color: #6d413c;
+		position: relative;
+		top: -6px;
+	}
+
+	.diamond-month:after {
+		content: '';
+		position: absolute;
+		left: -6px;
+		top: 6px;
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-top-color: #6d413c;
 	}
 	
 }
