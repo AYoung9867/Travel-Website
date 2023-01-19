@@ -11,7 +11,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //adding marker
 
-const circle = L.circle([48.61, 13.67], {
-	radius: 500,
-	color: 'yellow'
+const glenEtive = L.marker([48.61, 13.67], {
 }).addTo(mapEU)
+
+let 

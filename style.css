@@ -1,6 +1,7 @@
 body {
 	font-family: 'Comfortaa', cursive;
 	margin: 0;
+	background-color: #fff4da; 
 }
 
 .diamond-country {
@@ -206,13 +207,31 @@ polyline {
   transition: all 250ms ease-in-out;
 }
 
-.below{
-	background-color: #fff4da;
-	width: auto;
-	height: 2000vh;
+.outer-container {
 	min-width: 0;
 	min-height: 0;
+	border-top: 50px solid #fff4da;
+	border-right: 20px solid #fff4da;
+	border-left: 20px solid #fff4da;
+	display: flex;
+	flex-direction: column;
 }
+
+/* continents images */
+
+.continents-intro {
+	display: flex;
+}
+
+.continents-diarytitle {
+	flex-direction: column;
+	display: flex;
+	width: 80%;
+}
+
+
+
+/* continents and their names */
 
 .flexbox-container-continents {
 	min-width: 0;
@@ -220,12 +239,28 @@ polyline {
 	display: flex;
 	height: 60vh;
 	justify-content: space-evenly;
+	margin-top: 5%;
 }
 
 .continent-names {
 	display: flex;
 	flex-direction: column;
 	width:26.6666%;
+}
+
+.flexbox-child {
+	min-width: 0;
+	min-height: 0;
+	max-width: 100%;
+	display: flex;
+	align-self: flex-start;
+}
+
+.flexbox-img {
+	min-width: 0;
+	min-height: 0;
+	object-fit: contain;
+	margin: 10%;
 }
 
 .each-continents-container {
@@ -267,89 +302,23 @@ polyline {
 	width: 100%;
 }
 
-.flexbox-container-sidebar {
+
+
+/*title, intro and social media links */
+
+.intro-section {
 	display: flex;
-	height: 100vh;
-	flex-direction: column;
 	width: 20%;
-}
-
-.outer-container {
-	min-width: 0;
-	min-height: 0;
-	border-top: 50px solid #fff4da;
-	border-right: 20px solid #fff4da;
-	border-left: 20px solid #fff4da;
-	display: flex;
-	flex-direction: row;
-}
-
-.left-side-container {
-	display: flex;
 	flex-direction: column;
-	width: 80%;
-}
-
-.diary-title {
-	font-size: 50px;
-	color: #8D6B67;
-}
-
-.diary-entries {
-	line-height: 1.5;
-}
-
-.diary-container {
-	margin-top: 0px;
-	margin-right: 6%;
-	margin-left: 3%;
-}
-
-.diary-image {
-	width: 100%;
-	position: relative;
-
-}
-
-figure {
-	width: 40%;
-	text-align: center;
-	display: block;	
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10vh;
-}
-
-.flexbox-child {
-	min-width: 0;
-	min-height: 0;
-	max-width: 100%;
-	display: flex;
-	align-self: flex-start;
-}
-
-.flexbox-img {
-	min-width: 0;
-	min-height: 0;
-	object-fit: contain;
-	margin: 10%;
-
-}
-
-.flexbox-item-1 {
-
-}
-
-.flexbox-item-2 {
-
-}
-
-.flexbox-item-3 {
-
 }
 
 .web-title {
 	border-bottom: 10px solid #fff4da;
+}
+
+.intro {
+	font-size: 20px;
+	text-align: center;
 }
 
 .insta-links {
@@ -359,6 +328,11 @@ figure {
 
 .insta-logo {
 	margin: 3px;
+}
+
+.link-container {
+	display: flex;
+	flex-direction: column;
 }
 
 .erin-insta {
@@ -371,22 +345,6 @@ figure {
 	font-size: 18px;
 	text-decoration: none;
 	color: #111111
-}
-
-.email-links {
-	display: flex;
-	align-items: center;
-	margin-bottom: -10px;
-}
-
-.email-logo {
-	margin-top: 5px;
-}
-
-.email-link {
-	font-size: 18px;
-	text-decoration: none;
-	color: #111111;
 }
 
 .tiktok-links {
@@ -405,20 +363,88 @@ figure {
 	color: #111111;
 }
 
-.link-container {
+.email-links {
+	display: flex;
+	align-items: center;
+	margin-bottom: -10px;
+}
+
+.email-logo {
+	margin-top: 5px;
+}
+
+.email-link {
+	font-size: 18px;
+	text-decoration: none;
+	color: #111111;
+}
+
+
+
+
+
+.diary-sidebar {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+/* Diary entries */
+
+.diary-container {
+	margin-top: 0px;
+	margin-right: 6%;
+	margin-left: 3%;
+	width: 80%;
+}
+
+.diary-title {
+	font-size: 50px;
+	color: #8D6B67;
+}
+
+.diary-dates {
+	
+}
+
+.diary-entries {
+	line-height: 1.5;
+}
+
+.diary-image {
+	width: 100%;
+	position: relative;
+}
+
+figure {
+	width: 40%;
+	text-align: center;
+	display: block;	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10vh;
+}
+
+
+
+
+/*countries and months sidebar */
+
+.sticky-sidebar{
 	display: flex;
 	flex-direction: column;
+	width: 21%;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	margin-right: 2%;
+	margin-top: 10px;
+	height: 100vh;
+	overflow-y: scroll;
 }
 
-.intro {
-	font-size: 20px;
-	text-align: center;
-}
-
-.list-header {
-	font-size:30px; 
-	text-align: center; 
-	color: #111111;
+.sticky-sidebar::-webkit-scrollbar {
+	display: none;
 }
 
 .countries-list {
@@ -426,6 +452,12 @@ figure {
 	flex-direction: column;
 	margin-top: 20px;
 	background-color: #c6bf90;
+}
+
+.list-header {
+	font-size:30px; 
+	text-align: center; 
+	color: #111111;
 }
 
 .each-countries-container {
@@ -475,6 +507,8 @@ figure {
 	color: #565d3f;
 	text-decoration: none;
 }
+
+
 
 .months-list {
 	display: flex;
@@ -578,11 +612,11 @@ figure {
 		align-items: center;
 	}
 	
-	.left-side-container {
+	.continents-diarytitle, .diary-container {
 		width: 60%;
 	}
 	
-	.flexbox-container-sidebar {
+	.intro-section, .sticky-sidebar {
 		width: 40%;
 	}
 	
@@ -591,7 +625,7 @@ figure {
 	}
 	
 	.intro {
-		font-size: 13px;
+		font-size: 10px;
 	}
 	
 	.insta-links {
@@ -607,19 +641,19 @@ figure {
 	}
 	
 	.erin-insta {
-		font-size: 12px;
+		font-size: 10px;
 	}
 	
 	.alex-insta {
-		font-size: 12px;
+		font-size: 10px;
 	}
 	
 	.tiktok-link {
-		font-size: 12px;
+		font-size: 10px;
 	}
 	
 	.email-link {
-		font-size: 12px;
+		font-size: 5px;
 	}
 	
 	.list-header {
@@ -730,11 +764,11 @@ figure {
 	}
 	
 	.tiktok-link {
-		font-size: 12px;
+		font-size: 11px;
 	}
 	
 	.email-link {
-		font-size: 12px;
+		font-size: 11px;
 	}
 	
 	.list-header {
@@ -787,6 +821,19 @@ figure {
 		height: 0;
 		border: 6px solid transparent;
 		border-top-color: #6d413c;
+	}
+	
+	.continents-diarytitle, .diary-container {
+		width: 60%;
+	}
+	
+	.intro-section, .sticky-sidebar {
+		width: 40%;
+	}
+	
+	.flexbox-container-continents {
+		flex-direction: column;
+		align-items: center;
 	}
 	
 }
