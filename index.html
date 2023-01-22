@@ -94,7 +94,14 @@
 						</div>
 						<div>
 							<h1 class="diary-title"> DIARY ENTRIES <h1>
-
+							<div  class="toggle-radio">
+								<input type="radio" name="rdo" id="yes" checked>
+								<input type="radio" name="rdo" id="no">
+								<div class="switch">
+									<label for="yes" onclick="sortChildrenDivsById('diary-main')">Oldest to Newest</label>
+									<label for="no" onclick="altSortChildrenDivsById('diary-main')">Newest to Oldest</label>
+								</div>
+							</div>
 						</div>
 							
 					</div>
@@ -123,137 +130,191 @@
 			</div>
 					
 				<div class="diary-sidebar">	
-					<div class="diary-container" id="diary">
+					<div class="diary-container" id="diary-main">
 						
-						<h2 class="diary-dates" id="january-date"> 13-01-23</h2>
-						<p class="diary-entries">I don't want to write about the goodbye. I can’t think about it in retrospect because it still hurts. Alex did a great job comforting me, even if he did literally have to drag me onto the plane crying. The food on flight was relatively nice, however Alex’s Dad had set expectations high.</p>
-						<p class="diary-entries"> Since landing we’ve gotten a bus, a coach and a train to get to the airbnb apartment, which has only given chance for the overall impression that Kuala Lumpur is tropical and green. Very green. The room is nice, Alex spoke to the other flatmate staying in a different room, Joe from Jakarta.</p>
-						<p class="diary-entries">We went back downstairs where they have a few shops, koi fish pond and cafe just to get water then we were showered and asleep. Alex hadn’t managed to sleep at all on the flights so he was completely poleaxed. We slept through our time slot for the infinity swimming pool which was disappointing, made worse by the fact Alex did not neglect to wake us up promptly for his 3hr long speed awareness course. Mild argument ensued, I felt that only half waking someone up to ask the question ‘do you want to be asleep?’ was not a fair way of deciding whether I wanted to wake up to go swimming, but this isn’t a courtroom and I apparently did say that yes, I wanted to sleep.</p>
-						<p class="diary-entries">That’s all I have to say about the day, hardly an exciting start but an entire day of traveling was never going to make the highlights, however I am preemptively going to mention before Alex proof reads and uploads to the website, that we got the Boeing 787-10 and it was very impressive even if i did forget to get the pictures of it that he asked for. We also got a view of the second largest building in the world from the window of the coach. I will let Alex pass final judgement on which, the plane or the building, was most impressive in his opinion. </p>
-						<figure>
-							<p><img class="diary-image" src="images\Diary Images\Kuala Lumpur\Merdeka Tower.jpg" alt="Merdeka Tower">
-							<figcaption>Here’s a picture from the bottom of the Warisan Merdeka Tower taken amidst aimless wandering on the 14/01/23.</figcaption>
-						</figure>
-						
-						<h2 class="diary-dates"> 14-01-23</h2>
-						<p class="diary-entries"> Day 2 in Kuala Lumpur. Rocky start, woke up after a terrible nightmare and then found my toothbrush that I left out by the sink last night (without its plastic topper on) covered in teeny tiny bugs, freaked out and had to get my hunky man to shake them all off. </p>
-						<p class="diary-entries"> Cheered up very quickly when we made it to our morning slot for the rooftop pool. Absolutely incredible view and it felt so good to swim. We got there not long after sunrise so really got to appreciate the sun moving higher and temperature slowly rising. We had the pool entirely to ourselves for the first 15 minutes, and then were joined by only 2 others. Cannot wait for our evening slot tomorrow so we can see all the buildings lit up.</p>
-						<img src="images\Diary Images\Kuala Lumpur\Alex in Pool.jpg" alt="Alex in Pool" style="width: 40%; display: block; margin-left: auto; margin-right: auto;">
-						<p class="diary-entries"> We headed out without a plan and made our way towards the Petronas Towers. I was feeling really upbeat initially but very quickly felt overwhelmed and anxious, little food stalls and markets were crowded and with all the cars and scooters about too I was worried about getting in someone's way. We got food from a place that had the atmosphere and layout of a school canteen, and was served some variation of a nasi lemak. I didn’t get a picture because it looked as unappealing as it tasted, however Alex inhaled all of his, and then some of mine. </p>
-						<p class="diary-entries"> We walked past a really beautiful cemetery. It was filled with so many different plants, and was well looked after. You can see from the pictures but I think it looked especially beautiful because it was surrounded by the city buildings, whilst being incredibly green, vibrant and peaceful. </p>
-						<div style="display: flex; justify-content: space-evenly">
-							<img src="images\Diary Images\Kuala Lumpur\Graveyard with PT.jpg" style="width: 40%; display: block;">
-							<img src="images\Diary Images\Kuala Lumpur\Graveyard.jpg" style="width: 40%; display: block;">
+						<div id="1">
+							<h2 class="diary-dates" id="january-date"> 13-01-23</h2>
+							<p class="diary-entries">I don't want to write about the goodbye. I can’t think about it in retrospect because it still hurts. Alex did a great job comforting me, even if he did literally have to drag me onto the plane crying. The food on flight was relatively nice, however Alex’s Dad had set expectations high.</p>
+							<p class="diary-entries"> Since landing we’ve gotten a bus, a coach and a train to get to the airbnb apartment, which has only given chance for the overall impression that Kuala Lumpur is tropical and green. Very green. The room is nice, Alex spoke to the other flatmate staying in a different room, Joe from Jakarta.</p>
+							<p class="diary-entries">We went back downstairs where they have a few shops, koi fish pond and cafe just to get water then we were showered and asleep. Alex hadn’t managed to sleep at all on the flights so he was completely poleaxed. We slept through our time slot for the infinity swimming pool which was disappointing, made worse by the fact Alex did not neglect to wake us up promptly for his 3hr long speed awareness course. Mild argument ensued, I felt that only half waking someone up to ask the question ‘do you want to be asleep?’ was not a fair way of deciding whether I wanted to wake up to go swimming, but this isn’t a courtroom and I apparently did say that yes, I wanted to sleep.</p>
+							<p class="diary-entries">That’s all I have to say about the day, hardly an exciting start but an entire day of traveling was never going to make the highlights, however I am preemptively going to mention before Alex proof reads and uploads to the website, that we got the Boeing 787-10 and it was very impressive even if i did forget to get the pictures of it that he asked for. We also got a view of the second largest building in the world from the window of the coach. I will let Alex pass final judgement on which, the plane or the building, was most impressive in his opinion. </p>
+							<figure>
+								<p><img class="diary-image" src="images\Diary Images\Kuala Lumpur\Merdeka Tower.jpg" alt="Merdeka Tower">
+								<figcaption>Here’s a picture from the bottom of the Warisan Merdeka Tower taken amidst aimless wandering on the 14/01/23.</figcaption>
+							</figure>
 						</div>
-						<p class="diary-entries"> We sat in KLCC park whilst I lost my body weight in sweat and Alex sat beside me smiling and relaxed, then we bought a sim card, drank pepsi that tasted completely different to usual, and then ventured into Chinatown. Food again was a little strange, but even so I managed to get some on me. Now my white shorts have splashes of orange which I need to clean asap before Alex can question why in the hell I brought white shorts in the first place. </p>
-						<p class="diary-entries"> We bought iced watermelon smoothies, Alex’s came with tapioca pearls which he very impressively was able to shoot into my mouth from his straw. Then we thankfully got the train back and I fell asleep for the remainder of the afternoon. </p>
-						<p class="diary-entries"> Alex booked our bus tickets to the Cameron Highlands, and I reluctantly booked our first hostel stay in a shared dorm with capsule beds. Trying to be as open minded as Alex, who so far has not been phased by anything. </p>
+						
+						<div id="2">
+							<h2 class="diary-dates"> 14-01-23</h2>
+							<p class="diary-entries"> Day 2 in Kuala Lumpur. Rocky start, woke up after a terrible nightmare and then found my toothbrush that I left out by the sink last night (without its plastic topper on) covered in teeny tiny bugs, freaked out and had to get my hunky man to shake them all off. </p>
+							<p class="diary-entries"> Cheered up very quickly when we made it to our morning slot for the rooftop pool. Absolutely incredible view and it felt so good to swim. We got there not long after sunrise so really got to appreciate the sun moving higher and temperature slowly rising. We had the pool entirely to ourselves for the first 15 minutes, and then were joined by only 2 others. Cannot wait for our evening slot tomorrow so we can see all the buildings lit up.</p>
+							<img class="lone-image" src="images\Diary Images\Kuala Lumpur\Alex in Pool.jpg" alt="Alex in Pool">
+							<p class="diary-entries"> We headed out without a plan and made our way towards the Petronas Towers. I was feeling really upbeat initially but very quickly felt overwhelmed and anxious, little food stalls and markets were crowded and with all the cars and scooters about too I was worried about getting in someone's way. We got food from a place that had the atmosphere and layout of a school canteen, and was served some variation of a nasi lemak. I didn’t get a picture because it looked as unappealing as it tasted, however Alex inhaled all of his, and then some of mine. </p>
+							<p class="diary-entries"> We walked past a really beautiful cemetery. It was filled with so many different plants, and was well looked after. You can see from the pictures but I think it looked especially beautiful because it was surrounded by the city buildings, whilst being incredibly green, vibrant and peaceful. </p>
+							<img class="duel-image-1" src="images\Diary Images\Kuala Lumpur\Graveyard with PT.jpg">
+							<img class="duel-image-2" src="images\Diary Images\Kuala Lumpur\Graveyard.jpg">
+							<p class="diary-entries"> We sat in KLCC park whilst I lost my body weight in sweat and Alex sat beside me smiling and relaxed, then we bought a sim card, drank pepsi that tasted completely different to usual, and then ventured into Chinatown. Food again was a little strange, but even so I managed to get some on me. Now my white shorts have splashes of orange which I need to clean asap before Alex can question why in the hell I brought white shorts in the first place. </p>
+							<p class="diary-entries"> We bought iced watermelon smoothies, Alex’s came with tapioca pearls which he very impressively was able to shoot into my mouth from his straw. Then we thankfully got the train back and I fell asleep for the remainder of the afternoon. </p>
+							<p class="diary-entries"> Alex booked our bus tickets to the Cameron Highlands, and I reluctantly booked our first hostel stay in a shared dorm with capsule beds. Trying to be as open minded as Alex, who so far has not been phased by anything. </p>
+						</div>
+			
+						<div id="3">
+							<h2 class="diary-dates" style="margin-top: 80px;"> 15-01-23</h2>
+							<p class="diary-entries">Early start, wanted to visit the Batu Caves before it got busy. Alex made us rush to catch a train that actually wasn’t due for another 20 minutes. Still, it is always good to check your cardiovascular health, a workout from hell. The batu caves were worth the visit for only £1 each for the train and free entry inside. Think I prefer big statues to big buildings, will seek out more.</p>
+							<img class="lone-image" src="images\Diary Images\Kuala Lumpur\Batu Caves.jpg" alt="Batu Caves">
+							<p class="diary-entries">Lunch was unexpectedly adventurous. I ordered a bowl of noodles the same as the woman next to me was eating because it looked good, without realizing all the meat was random offcuts from a cow. We successfully identified a tongue and an artery…or vein? The rest was so bizarre we had no idea. There was a dry looking slice of meat that had the consistency of an undercooked courgette, and cubes that looked like liver but were tasteless and very much like jelly, and a beaten up pale meat that tasted like chicken. </p>
+							<figure class="duel-image-1">
+								<p><img class="diary-image" src="images\Diary Images\Kuala Lumpur\Cow Dissection.jpg" alt="Merdeka Tower">
+								<figcaption>Alex going in head first.</figcaption>
+							</figure>
+							<figure class="duel-image-2">
+								<p><img class="diary-image" src="images\Diary Images\Kuala Lumpur\Tongue.jpg" alt="Merdeka Tower">
+								<figcaption>Maybe tongue?</figcaption>
+							</figure>
+							<p class="diary-entries">Alex went in like a mad man, but I did eventually try everything too. The tongue tasted like condensed kidney which was really not nice, but everything else was fine. Alex liked the bits of crackling on top most.</p>
+							<figure class="duel-image-1">
+								<p><img class="diary-image" src="images\Diary Images\Kuala Lumpur\Vegetable Meat.jpg" alt="Merdeka Tower">
+								<figcaption>The deceptive vegetable.</figcaption>
+							</figure>
+							<figure class="duel-image-2">
+								<p><img class="diary-image" src="images\Diary Images\Kuala Lumpur\Vein.jpg" alt="Merdeka Tower">
+								<figcaption>A vein or an artery. Who knows? Who cares?</figcaption>
+							</figure>
 		
-						<h2 class="diary-dates" style="margin-top: 80px;"> 15-01-23</h2>
-						<p class="diary-entries">Early start, wanted to visit the Batu Caves before it got busy. Alex made us rush to catch a train that actually wasn’t due for another 20 minutes. Still, it is always good to check your cardiovascular health, a workout from hell. The batu caves were worth the visit for only £1 each for the train and free entry inside. Think I prefer big statues to big buildings, will seek out more.</p>
-						<img src="images\Diary Images\Kuala Lumpur\Batu Caves.jpg" alt="Batu Caves" style="width: 40%; display: block; margin-left: auto; margin-right: auto;">
-						<p class="diary-entries">Lunch was unexpectedly adventurous. I ordered a bowl of noodles the same as the woman next to me was eating because it looked good, without realizing all the meat was random offcuts from a cow. We successfully identified a tongue and an artery…or vein? The rest was so bizarre we had no idea. There was a dry looking slice of meat that had the consistency of an undercooked courgette, and cubes that looked like liver but were tasteless and very much like jelly, and a beaten up pale meat that tasted like chicken. Alex went in like a mad man, but I did eventually try everything too. The tongue tasted like condensed kidney which was really not nice, but everything else was fine. Alex liked the bits of crackling on top most.</p>
-						<div style="display: flex; justify-content: space-evenly">
+							<p class="diary-entries">We did a little wandering and then ordered our first grab taxi to go to Masjid Wilayah Persekutuan (The Federal Territory Mosque). Without a moment's hesitation we were scooped up from the entrance and taken in. I had thought my full length trousers and long shirt that I had worn for visiting the Batu Caves was respectful enough but I was given a pink abaya and a head scarf to wear. Don’t think the look suited me but I was happy with the colour choices. The tour was really interesting, (name) took us around, explaining the buildings architecture and religion. A few assumptions were made, "We all agree that there is one God right?" *Reluctantly nods head like sheep* I won’t be converting to Islam anytime soon but it was great to learn and get some pictures. Our volunteer tour guide gave us her contact details before we left in case we ever got into any trouble and needed help. Apparently it wasn’t just a kind gesture because whilst we were there a woman turned up after having her bag stolen with her passport inside. </p>
+							<img src="images\Diary Images\Kuala Lumpur\Mosque Outside.jpg" style="width: 60%; display: block; margin: 10vh auto 10px auto;">
+							<img class="lone-image" src="images\Diary Images\Kuala Lumpur\Mosque Inside.jpg">
+							<p class="diary-entries">Alex’s cool facade has finally cracked and I watched as stress visibly seeped in. We went to Jalan Alor for dinner, a busy food street. Food was incredible and we maybe got carried away ordering dishes to try so the total was more than expected and pushed us over budget. We’d also slept in the afternoon again and not headed out until late and Alex was anxious to pack before morning.</p>
 							<figure>
-							<p><img class="diary-image" src="images\Diary Images\Kuala Lumpur\Cow Dissection.jpg" alt="Merdeka Tower">
-							<figcaption>Alex going in head first.</figcaption>
+								<p><img class="diary-image" src="images\Diary Images\Kuala Lumpur\Alors Food.jpg" alt="Merdeka Tower">
+								<figcaption>The aforementioned incredible food.</figcaption>
 							</figure>
-							<figure>
-							<p><img class="diary-image" src="images\Diary Images\Kuala Lumpur\Tongue.jpg" alt="Merdeka Tower">
-							<figcaption>Maybe tongue?</figcaption>
-							</figure>
+							<p class="diary-entries">In other important news, I rigorously scrubbed clean my shorts. The fashion show continues.</p>
 						</div>
-						<div style="display: flex; justify-content: space-evenly">
-							<figure>
-							<p><img class="diary-image" src="images\Diary Images\Kuala Lumpur\Vegetable Meat.jpg" alt="Merdeka Tower">
-							<figcaption>The deceptive vegetable.</figcaption>
-							</figure>
-							<figure>
-							<p><img class="diary-image" src="images\Diary Images\Kuala Lumpur\Vein.jpg" alt="Merdeka Tower">
-							<figcaption>A vein or an artery. Who knows? Who cares?</figcaption>
-							</figure>
-						</div>
-						<p class="diary-entries">We did a little wandering and then ordered our first grab taxi to go to Masjid Wilayah Persekutuan (The Federal Territory Mosque). Without a moment's hesitation we were scooped up from the entrance and taken in. I had thought my full length trousers and long shirt that I had worn for visiting the Batu Caves was respectful enough but I was given a pink abaya and a head scarf to wear. Don’t think the look suited me but I was happy with the colour choices. The tour was really interesting, ….. took us around, explaining the buildings architecture and religion. I won’t be converting to Islam anytime soon but it was great to learn and get some pictures. Our volunteer tour guide gave us her contact details before we left in case we ever got into any trouble and needed help. Apparently it wasn’t just a kind gesture because whilst we were there a woman turned up after having her bag stolen with her passport inside. </p>
-						<img src="images\Diary Images\Kuala Lumpur\Mosque Outside.jpg" style="width: 60%; display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px;">
-						<img src="images\Diary Images\Kuala Lumpur\Mosque Inside.jpg" style="width: 40%; display: block; margin-left: auto; margin-right: auto;">
-						<p class="diary-entries">Alex’s cool facade has finally cracked and I watched as stress visibly seeped in. We went to Jalan Alor for dinner, a busy food street. Food was incredible and we maybe got carried away ordering dishes to try so the total was more than expected and pushed us over budget. We’d also slept in the afternoon again and not headed out until late and Alex was anxious to pack before morning.</p>
-						<figure>
-							<p><img class="diary-image" src="images\Diary Images\Kuala Lumpur\Alors Food.jpg" alt="Merdeka Tower">
-							<figcaption>The aforementioned incredible food.</figcaption>
-						</figure>
-						<p class="diary-entries">In other important news, I rigorously scrubbed clean my shorts. The fashion show continues.</p>
 
-						<h2 class="diary-dates" style="margin-top: 80px;"> 16-01-23</h2>
-						<p class="diary-entries">Day 1 staying in a hostel. Getting the coach to the Cameron Highlands went smoothly. Freaked Alex out when I told him I could read his mind then proceeded to guess correctly what number from 1 to 10 he was thinking of, then what colour, and then what card from a deck! We had to stop there because Alex looked like he might cry, it’s never a good sign when someone starts questioning ‘This isn’t real’ referring to reality.</p>
-						<p class="diary-entries">The hostel is nice and clean but I feel uncomfortable and unbearably shy. Alex has signed us up to do a morning hike with anyone else that wants to join but I'm praying he changes his mind. More good food, and now considering we missed our usual siesta I think we’ll go to bed early.</p>
-						<p class="diary-entries">Feeling excited to explore the town and surrounding farms tomorrow, and we may even decide, very tentatively, to be a little sociable. Alex however has a dry cough and thinks his wisdom teeth may be pushing through so maybe we won’t!</p>
+						<div id="4">
+							<h2 class="diary-dates" style="margin-top: 80px;"> 16-01-23</h2>
+							<p class="diary-entries">Day 1 staying in a hostel. Getting the coach to the Cameron Highlands went smoothly. Freaked Alex out when I told him I could read his mind then proceeded to guess correctly what number from 1 to 10 he was thinking of, then what colour, and then what card from a deck! We had to stop there because Alex looked like he might cry, it’s never a good sign when someone starts questioning ‘This isn’t real’ referring to reality.</p>
+							<p class="diary-entries">The hostel is nice and clean but I feel uncomfortable and unbearably shy. Alex has signed us up to do a morning hike with anyone else that wants to join but I'm praying he changes his mind. More good food, and now considering we missed our usual siesta I think we’ll go to bed early.</p>
+							<p class="diary-entries">Feeling excited to explore the town and surrounding farms tomorrow, and we may even decide, very tentatively, to be a little sociable. Alex however has a dry cough and thinks his wisdom teeth may be pushing through so maybe we won’t!</p>
+						</div>
 
-						<h2 class="diary-dates" style="margin-top: 80px;"> 17-01-23</h2>
-						<p class="diary-entries">The morning hike ended up being a great decision, even if it was far more intensive than expected. Took us 4 hrs in total, in a group of 9. Me and Alex accidentally dressed matching, green shorts white t, just in case there was any doubt we were together. We were the only 2 to not get covered in mud, which was lucky because we were also the least equipped, everyone had teased me over my freshly cleaned white trainers but they held up well. At one point Alex went rogue and decided he would jump down onto precarious platforms to get down a steep section rather than shuffle down holding a rope, which would have been fine if he hadn’t recommended others to try. The first, and last person to try following his lead almost missed the platform entirely, landed on her stomach and in doing so threw her water bottle (which Alex thankfully caught). She wasn’t hurt, out of everyone she fell the most anyway. At another point I was nearly pushed off the edge helping someone up, the fall would have killed us both and I was holding her entire body weight with both hands. Somehow we all made it up to the top for a nice group picture, and with only half the group making a wrong turn we all made it back down to the cafe at the bottom where I finally, after 6 days, got to enjoy a cup of tea. </p>
-						<div style="display: flex; justify-content: space-evenly">
-							<img src="images\Diary Images\Cameron Highlands\Group Picture.jpg" style="width: 40%; display: block;">
-							<img src="images\Diary Images\Cameron Highlands\Rope Climb.jpg" style="width: 40%; display: block;">
-						</div>
-						<p class="diary-entries">The caveat to making it back to the hostel however was that we needed to hitchhike. The volunteer at the hostel said it was the norm and everyone gets picked up within 5 minutes. We must have stood there waving and smiling at cars for over 45 minutes before anyone got a ride. I feel like it was my impromptu dance that got us ours. We got in the back of a lovely Malaysian womens car who was driving with her tiny 1 yrs old baby.</p>
-						<div style="display: flex; justify-content: space-evenly">
-							<img src="images\Diary Images\Cameron Highlands\All Hiking Tea.jpg" style="width: 40%; display: block;">
-							<img src="images\Diary Images\Cameron Highlands\Alex Hiking Tea.jpg" style="width: 40%; display: block;">
-						</div>
-						<p class="diary-entries">We got food with our newly made friend and invited them to join our team for the trivia quiz in the evening, then back at the hostel one of the girls from the hike bought cake to celebrate her birthday so we had some of that. I outed Alex’s party trick of naming the capital city of every country, he tried to act embarrassed but I know he enjoyed everyone firing countries at him and getting them all right.</p>
-						<img src="images\Diary Images\Cameron Highlands\A+E in Tea.jpg" alt="Alex in Pool" style="width: 40%; display: block; margin-left: auto; margin-right: auto;">
-						<p class="diary-entries">Needless to say our team, Air Heads, comprising of me, Alex and our very quirky friend won the trivia quiz. Alex did most of the work but I feel like I filled in the gaps nicely. We won a can of beer each and the overall losers had to try durian. The hostel still smells of it now. The quiz felt a little biased since it was the Scottish volunteer that chose the questions, however we forgot the national animal of Scotland anyway. I say our friend was quirky, they’re very upfront and outspoken, another team asked what a mammal was for the question ‘which is the only mammal that can fly’ and they announced ‘birds lay eggs, mammals push babies out of vagina’. They also said ‘wow they must know nothing’ about the losing team. They are French, so rather than it being rude it comes across as cool and edgy.</p>
-						<p class="diary-entries">That’s all for today folks! I showed the pictures from today's Hike to my Mum and she said it looks like the UK :)</p>
-						
-						<h2 class="diary-dates" style="margin-top: 80px;"> 18-01-23</h2>
-						<p class="diary-entries">Last night I had a sleepy hallucination where I saw a spindly looking spider right in front of my face as I was falling asleep, when I jumped up and flashed my torch around I couldn't see anything. It happened again when I was actually asleep but I seemed to know that wasn't real and didn't panic. So far the only creepers that have bothered me are the tiny bugs I saw on that first night, they're everywhere.</p>
-						<p class="diary-entries">We hired a scooter for the morning expecting to sight-see all the farms and plantations but instead we fell into the twilight zone. The highly recommended Lavender Garden ended up being a tiny tourist trap made from plastic and bright paint. We wondered about roadside souvenir shops selling plastic decorative garlic and themed Jaws cards...without the theme. It felt so bizarre and illusory. There was also a 'time tunnel' museum which looked like rooms full of old tat but after being ripped off so brazenly by the Lavender Garden we didn't bother.</p>
-						<div style="display: flex; justify-content: space-evenly; margin-top: 10vh; margin-bottom: 10vh;">
-							<img src="images\Diary Images\Cameron Highlands\Alex Castle.jpg" style="width: 40%; display: block;">
-							<img src="images\Diary Images\Cameron Highlands\Alex Corn.jpg" style="width: 40%; display: block;">
-						</div>
-						<div style="display: flex; justify-content: space-evenly; margin-bottom: 10vh;">
-							<img src="images\Diary Images\Cameron Highlands\Jaws Cards.jpg" style="width: 40%; display: block;">
-							<img src="images\Diary Images\Cameron Highlands\Garlic.jpg" style="width: 40%; display: block;">
-						</div>
-						<p class="diary-entries">With nothing better to do we took our chances with the butterfly farm which was actually quite cool. It did get overwhelming quite quickly, and Alex was freaked out because some of the butterflies had broken wings and he was preoccupied by the idea that something in there was stalking the shadows ready to clip his wings too, in fairness there were giant spiders in boxes randomly scattered around. The butterfly farm had an unadvertised regular farm in the back with all sorts of mad animals, and a dirty looking aquarium.</p>
-						<div style="display: flex; justify-content: space-evenly; margin-top: 10vh; margin-bottom: 10vh;">
-							<img src="images\Diary Images\Cameron Highlands\Butterfly 1.jpg" style="width: 40%; display: block;">
-							<img src="images\Diary Images\Cameron Highlands\Butterfly 2.jpg" style="width: 40%; display: block;">
-						</div>
-						<p class="diary-entries">Next we met up with a few people from yesterday's walk and took an 'illegal' walk in the mossy forest lookalike (apparently it wasn't the mossy forest). Our hostel gave us directions but a tour guide on the trail told us we couldn't enter without a guide, unsurprisingly. We carried on 'at our own risk' and only took 20 minutes. Here's Alex first to reach the top, posed proudly with the flag.</p>
-						<img src="images\Diary Images\Cameron Highlands\Alex Flag.jpg" alt="Alex in Pool" style="width: 40%; display: block; margin-left: auto; margin-right: auto;">
-						<p class="diary-entries">Me and Alex have taken to winking a lot at each other and making games from anything i.e guessing which foot Alex is tapping under the table. I think we are bored. Similar to KL, our stay at Cameron Highlands felt like one day too many.</p>
+						<div id="5">
+							<h2 class="diary-dates" style="margin-top: 80px;"> 17-01-23</h2>
+							<p class="diary-entries">The morning hike ended up being a great decision, even if it was far more intensive than expected. Took us 4 hrs in total, in a group of 9. Me and Alex accidentally dressed matching, green shorts white t, just in case there was any doubt we were together. We were the only 2 to not get covered in mud, which was lucky because we were also the least equipped, everyone had teased me over my freshly cleaned white trainers but they held up well. At one point Alex went rogue and decided he would jump down onto precarious platforms to get down a steep section rather than shuffle down holding a rope, which would have been fine if he hadn’t recommended others to try. The first, and last person to try following his lead almost missed the platform entirely, landed on her stomach and in doing so threw her water bottle (which Alex thankfully caught). She wasn’t hurt, out of everyone she fell the most anyway. At another point I was nearly pushed off the edge helping someone up, the fall would have killed us both and I was holding her entire body weight with both hands. Somehow we all made it up to the top for a nice group picture, and with only half the group making a wrong turn we all made it back down to the cafe at the bottom where I finally, after 6 days, got to enjoy a cup of tea. </p>
+			
+							<img class="duel-image-1" src="images\Diary Images\Cameron Highlands\Group Picture.jpg">
+							<img class="duel-image-2" src="images\Diary Images\Cameron Highlands\Rope Climb.jpg">
 					
-						<h2 class="diary-dates" style="margin-top: 80px;"> 19-01-23</h2>
-						<p class="diary-entries">The bus to Penang was peachy but by god I have some higher force to thank for surviving the taxi to Georgetown. Absolutely terrifying, it feels like every time we're in a taxi we're living off borrowed time. </p>
-						<p class="diary-entries">Penang is really pretty, I've included the picture taken of the road our airbnb is on. Chinese New Year is only 3 days away so all the streets and temples/shrines are decorated. Our host recommended a food market for lunch, I got a delicious clay pot chicken. We went back for dinner it was so nice. By far the two yummiest meals I‘ve had yet.</p>
-						<img src="images\Diary Images\Penang\Street.jpg" alt="Alex in Pool" style="width: 40%; display: block; margin-left: auto; margin-right: auto; margin-top: 10vh; margin-bottom: 10vh;">
-						<p class="diary-entries">I know that after hallucinating a spider the other night that I've lost some credibility but I swear I saw an alligator today! Alex doesn't believe me and it had swam away by the time I called him back to look. It was in really shallow murky water.</p>
-						<img src="images\Diary Images\Penang\Jetty.jpg" alt="Alex in Pool" style="width: 40%; display: block; margin-left: auto; margin-right: auto; margin-top: 10vh; margin-bottom: 10vh;">
-						<p class="diary-entries">Alex makes us walk everywhere and lies about how long journeys will take, even though it was so much hotter than in the Cameron Highlands. I complain lots and will only be pacified by frequent breaks. It was during one of our pit stops when we found 'Adore Art Cafe'. Had the nicest fresh apple juice, we literally watched as he cut and blended a full apple. So sooo good, I could really taste the granny smith, and Alex joined a band! (He went shy)</p>
-						<img src="images\Diary Images\Penang\Adore cafe.jpg" alt="Alex in Pool" style="width: 40%; display: block; margin-left: auto; margin-right: auto; margin-top: 10vh; margin-bottom: 10vh;">
-						<p class="diary-entries">The next 2 hours were spent in Alex's personal hell of a shopping mall turned bus station with a 4 lane main road running through the middle. We walked round and round in circles trying to find a coach company that could take us to Krabi, Thailand tomorrow. I trailed behind still buzzed from my apple juice, role playing race across the world. I thought Alex might have imploded first but we did eventually find somewhere.</p>
-						<p class="diary-entries">Thailand tomorrow! Very excited. We've already booked 2 nights in an airbnb and 2 nights in an 'off the beaten track' hostel in Ao Nang.</p>
-						<p class="diary-entries">Leaving Penang on a positive note.</p>
-						<img src="images\Diary Images\Penang\Erin on street.jpg" alt="Alex in Pool" style="width: 40%; display: block; margin-left: auto; margin-right: auto;">
+							<p class="diary-entries">The caveat to making it back to the hostel however was that we needed to hitchhike. The volunteer at the hostel said it was the norm and everyone gets picked up within 5 minutes. We must have stood there waving and smiling at cars for over 45 minutes before anyone got a ride. I feel like it was my impromptu dance that got us ours. We got in the back of a lovely Malaysian womens car who was driving with her tiny 1 yrs old baby.</p>
+	
+							<img class="duel-image-1" src="images\Diary Images\Cameron Highlands\All Hiking Tea.jpg">
+							<img class="duel-image-2" src="images\Diary Images\Cameron Highlands\Alex Hiking Tea.jpg">
+			
+							<p class="diary-entries">We got food with our newly made friend and invited them to join our team for the trivia quiz in the evening, then back at the hostel one of the girls from the hike bought cake to celebrate her birthday so we had some of that. I outed Alex’s party trick of naming the capital city of every country, he tried to act embarrassed but I know he enjoyed everyone firing countries at him and getting them all right.</p>
+							<img class="lone-image" src="images\Diary Images\Cameron Highlands\A+E in Tea.jpg" alt="Alex in Pool">
+							<p class="diary-entries">Needless to say our team, Air Heads, comprising of me, Alex and our very quirky friend won the trivia quiz. Alex did most of the work but I feel like I filled in the gaps nicely. We won a can of beer each and the overall losers had to try durian. The hostel still smells of it now. The quiz felt a little biased since it was the Scottish volunteer that chose the questions, however we forgot the national animal of Scotland anyway. I say our friend was quirky, they’re very upfront and outspoken, another team asked what a mammal was for the question ‘which is the only mammal that can fly’ and they announced ‘birds lay eggs, mammals push babies out of vagina’. They also said ‘wow they must know nothing’ about the losing team. They are French, so rather than it being rude it comes across as cool and edgy.</p>
+							<p class="diary-entries">That’s all for today folks! I showed the pictures from today's Hike to my Mum and she said it looks like the UK :)</p>
+						</div>
+
+						<div id="6">
+							<h2 class="diary-dates" style="margin-top: 80px;"> 18-01-23</h2>
+							<p class="diary-entries">Last night I had a sleepy hallucination where I saw a spindly looking spider right in front of my face as I was falling asleep, when I jumped up and flashed my torch around I couldn't see anything. It happened again when I was actually asleep but I seemed to know that wasn't real and didn't panic. So far the only creepers that have bothered me are the tiny bugs I saw on that first night, they're everywhere.</p>
+							<p class="diary-entries">We hired a scooter for the morning expecting to sight-see all the farms and plantations but instead we fell into the twilight zone. The highly recommended Lavender Garden ended up being a tiny tourist trap made from plastic and bright paint. We wondered about roadside souvenir shops selling plastic decorative garlic and themed Jaws cards...without the theme. It felt so bizarre and illusory. There was also a 'time tunnel' museum which looked like rooms full of old tat but after being ripped off so brazenly by the Lavender Garden we didn't bother.</p>
 						
-						<h2 class="diary-dates" style="margin-top: 80px;" id="thailand"> 20-01-23</h2>
-						<p class="diary-entries">Went to the office we booked our bus to Krabi with at 5am and the bus wasn't there. Alex went through the works, we called the 3 different numbers for them, none answered. I sat patiently like a faithful dog, Alex stressed. After 30 long minutes it finally turned up! </p>
-						<p class="diary-entries">We were bundled in and out of 3 different buses and the final and worse bus typically was the one we'd be in the longest. 11 hrs in total spent upright on a bus seat smaller than the ones on a plane. </p>
-						<p class="diary-entries">We crossed the border easily at least, and our airbnb is right by the jetty to visit Railey beach. We took a dip in the swimming pool here but the water wasn't clear and started to irritate Alex's skin. Alex also started to lose his mind because he couldn't plug the adapter into any of the sockets because on every single plug socket in our room is a closely placed switch. He was really panicking and for some reason all I could do was giggle. He found one behind the TV from the 80s.</p>
-						<p class="diary-entries">First impressions of thailand: people will carry anything on a scooter.</p>
-						<p class="diary-entries">The weather has been very overcast, Alex told me to be patient. I was promised a paradise so I expect sun and blue skies for tomorrow!</p>
-						<div style="display: flex; justify-content: space-evenly">
+							<img class="duel-image-1" src="images\Diary Images\Cameron Highlands\Alex Castle.jpg">
+							<img class="duel-image-2" src="images\Diary Images\Cameron Highlands\Alex Corn.jpg">
+					
+					
+							<img class="duel-image-1" src="images\Diary Images\Cameron Highlands\Jaws Cards.jpg">
+							<img class="duel-image-2" src="images\Diary Images\Cameron Highlands\Garlic.jpg">
+						
+							<p class="diary-entries">With nothing better to do we took our chances with the butterfly farm which was actually quite cool. It did get overwhelming quite quickly, and Alex was freaked out because some of the butterflies had broken wings and he was preoccupied by the idea that something in there was stalking the shadows ready to clip his wings too, in fairness there were giant spiders in boxes randomly scattered around. The butterfly farm had an unadvertised regular farm in the back with all sorts of mad animals, and a dirty looking aquarium.</p>
+			
+							<img class="duel-image-1" src="images\Diary Images\Cameron Highlands\Butterfly 1.jpg">
+							<img class="duel-image-2" src="images\Diary Images\Cameron Highlands\Butterfly 2.jpg">
+					
+							<p class="diary-entries">Next we met up with a few people from yesterday's walk and took an 'illegal' walk in the mossy forest lookalike (apparently it wasn't the mossy forest). Our hostel gave us directions but a tour guide on the trail told us we couldn't enter without a guide, unsurprisingly. We carried on 'at our own risk' and only took 20 minutes. Here's Alex first to reach the top, posed proudly with the flag.</p>
+							<img class="lone-image" src="images\Diary Images\Cameron Highlands\Alex Flag.jpg" alt="Alex in Pool">
+							<p class="diary-entries">Me and Alex have taken to winking a lot at each other and making games from anything i.e guessing which foot Alex is tapping under the table. I think we are bored. Similar to KL, our stay at Cameron Highlands felt like one day too many.</p>
+						</div>
+						
+						<div id="7">
+							<h2 class="diary-dates" style="margin-top: 80px;"> 19-01-23</h2>
+							<p class="diary-entries">The bus to Penang was peachy but by god I have some higher force to thank for surviving the taxi to Georgetown. Absolutely terrifying, it feels like every time we're in a taxi we're living off borrowed time. </p>
+							<p class="diary-entries">Penang is really pretty, I've included the picture taken of the road our airbnb is on. Chinese New Year is only 3 days away so all the streets and shrines are decorated. Our host recommended a food market for lunch, I got a delicious clay pot chicken. We went back for dinner it was so nice. By far the two yummiest meals I‘ve had yet.</p>
+							<img class="lone-image" src="images\Diary Images\Penang\Street.jpg" alt="Alex in Pool">
+							<p class="diary-entries">I know that after hallucinating a spider the other night that I've lost some credibility but I swear I saw an alligator today! Alex doesn't believe me and it had swam away by the time I called him back to look. It was in really shallow murky water.</p>
+							<img class="lone-image" src="images\Diary Images\Penang\Jetty.jpg" alt="Alex in Pool">
+							<p class="diary-entries">Alex makes us walk everywhere and lies about how long journeys will take, even though it was so much hotter than in the Cameron Highlands. I complain lots and will only be pacified by frequent breaks. It was during one of our pit stops when we found 'Adore Art Cafe'. Had the nicest fresh apple juice, we literally watched as he cut and blended a full apple. So sooo good, I could really taste the granny smith, and Alex joined a band! (He went shy)</p>
+							<img class="lone-image" src="images\Diary Images\Penang\Adore cafe.jpg" alt="Alex in Pool">
+							<p class="diary-entries">The next 2 hours were spent in Alex's personal hell of a shopping mall turned bus station with a 4 lane main road running through the middle. We walked round and round in circles trying to find a coach company that could take us to Krabi, Thailand tomorrow. I trailed behind still buzzed from my apple juice, role playing race across the world. I thought Alex might have imploded first but we did eventually find somewhere.</p>
+							<p class="diary-entries">Thailand tomorrow! Very excited. We've already booked 2 nights in an airbnb and 2 nights in an 'off the beaten track' hostel in Ao Nang.</p>
+							<p class="diary-entries">Leaving Penang on a positive note.</p>
+							<img class="lone-image" src="images\Diary Images\Penang\Erin on street.jpg" alt="Alex in Pool">
+						</div>
+
+						<div id="8">
+							<h2 class="diary-dates" id="thailand"> 20-01-23</h2>
+							<p class="diary-entries">Went to the office we booked our bus to Krabi with at 5am and the bus wasn't there. Alex went through the works, we called the 3 different numbers for them, none answered. I sat patiently like a faithful dog, Alex stressed. After 30 long minutes it finally turned up! </p>
+							<p class="diary-entries">We were bundled in and out of 3 different buses and the final and worse bus typically was the one we'd be in the longest. 11 hrs in total spent upright on a bus seat smaller than the ones on a plane. </p>
+							<p class="diary-entries">We crossed the border easily at least, and our airbnb is right by the jetty to visit Railey beach. We took a dip in the swimming pool here but the water wasn't clear and started to irritate Alex's skin. Alex also started to lose his mind because he couldn't plug the adapter into any of the sockets because on every single plug socket in our room is a closely placed switch. He was really panicking and for some reason all I could do was giggle. He found one behind the TV from the 80s.</p>
+							<p class="diary-entries">First impressions of thailand: people will carry anything on a scooter.</p>
+							<p class="diary-entries">The weather has been very overcast, Alex told me to be patient. I was promised a paradise so I expect sun and blue skies for tomorrow!</p>
+							
+							<figure class="duel-image-1">
+								<p><img class="diary-image" src="images\Diary Images\Krabi\Pool.jpg" alt="Merdeka Tower">
+								<figcaption>Well deserved pool break.</figcaption>
+							</figure>
+							<figure class="duel-image-2">
+								<p><img class="diary-image" src="images\Diary Images\Krabi\Roti.jpg" alt="Merdeka Tower">
+								<figcaption>Finally a sweet treat! Tasted like warm sugar glazed donuts.</figcaption>
+							</figure>
+							
+						</div>
+						
+						<div id="9">
+							<h2 class="diary-dates"> 21-01-23</h2>
+							<p class="diary-entries">We both didn't sleep well last night, Alex reckons it's because the air conditioning made so much noise it sounded like the building was going to fall down. It also pissed out water the entire night, luckily Alex in a sleepy daze moved his bag from underneath after the first drop.</p>
+							<p class="diary-entries">We had an argument this morning with our toothbrushes still in, comedic relief didn't come until after. I can't even remember what the argument was over now.</p>
+							<p class="diary-entries">The promised sunshine came so we took a long tail boat to Railay Beach. Filled our bellies with pad Thai, spring rolls and samosas before lazing around swimming and napping on the sand. I think there was something in the water, Alex isn't sure but both of us whilst swimming felt stings like tiny bug bites, sometimes it would really hurt. No idea what it could be.</p>
+							<p class="diary-entries">My bracelet gains another bead, the Indian Ocean: completed. Although Alex would like to note that technically it was the Andaman sea that we were in.</p>
+							<img class="lone-image" src="images\Diary Images\Krabi\Railey.jpg" alt="Alex in Pool">
+							<p class="diary-entries">On the boat back we met some fabulous Thai ladies, then we played our made up game sharks and spoons in the pool together. Alex got a little too playful and tried to hold me down in the water and in my panic I kicked him as hard as I could square in the chest. No hard feelings.</p>
+							<p class="diary-entries">We took a night time nature trail on our way to dinner (5 minutes around the corner). Spotted 4 dogs, 2 cats, 2 lizards and 2 toads!</p>
+							<img class="lone-image" src="images\Diary Images\Krabi\Toad.jpg" alt="Alex in Pool">
+							<p class="diary-entries">I've been ordering Thai tea as a replacement for my regular brew, it does usually taste a bit different but the one I had tonight tasted exactly like how incense sticks smell. Specifically those strong Indian ones Nag Champa, If you’re still not sure what I mean then walk into Salsa's, Warrington.</p>
+							<p class="diary-entries">I think we are finally in the habit of staying awake all day now! Alex may be asleep next to me fully dressed and with his phone still in his hand, but it's 10pm so he's fared well.</p>
+						
+						</div>
+						
+						<div id="10">
+							<h2 class="diary-dates"> 22-01-23</h2>
+							<p class="diary-entries">I think we took it for granted in Malaysia how fluent everyone that we met was in speaking English. I read this morning that Thailand’s English proficiency ranking among non-native English speaking countries has been ranked one of the lowest. I had suspected as much from the bus transfers the other day when we were addressed only by ‘ao nang?’
+							<br>*we nod our heads*
+							<br>then a point ‘ao nang’
+							<br>hastily grabbing our bags to move to the pointed at bus
+							<br>‘ao nang?’
+							<br>*another nod of our heads
+							<br>‘ao nang’
+							<br>*gets on bus*
+							</p>
+							<p class="diary-entries">If more confirmation was needed then it came today. We ordered our taxi from our airbnb to take us to the hostel. As promised ‘The bananas, off the beaten track’ was in fact off the beaten track and so not a very appealing journey for the taxi who once seeing our destination tried to cancel. We then strenuously tried to communicate an agreed upon new price, with the driver having to speak into google translate, Alex typing back and then also having to communicate we needed to hop onto his hotspot to cancel the journey on the app. We got there in the end.</p>
+							<p class="diary-entries">Our hostel is perfect, very relaxing. Our hut is made from bamboo, there are hammocks and benches everywhere, monkeys in the trees and kayaks to rent. Alex immediately went to extend our stay from 2 days to 4. I think he wants to settle down for a little bit and go slower. </p>
+							<img class="duel-image-1" src="images\Diary Images\Krabi\Erin in Hut.jpg">
+							<img class="duel-image-2" src="images\Diary Images\Krabi\Alex at Hostel.jpg">
+							<p class="diary-entries">Since getting here we’ve sat down in the common area playing rummikub and hanamikoji and wandered down the road a short distance for dinner. We walked past some children playing who called out to us, we waved and said hello, they returned the greeting but then also shouted ‘potato’. We walked past them a second time and the bravest introduced himself, so we told them our names. They were happy to try out ‘Alex’ but I got blank stares for my name, I don't think they liked it.</p>
+							<p class="diary-entries">There's a wooden pier here and apparently when it’s high tide at night there’s fluorescent plankton! Really hope we get to go swimming and see.</p>
+							<p class="diary-entries">Sat here writing whilst Alex works on the website and finally we’re experiencing a rainstorm! I don't know how we avoided it so long, it sounds lovely on the bamboo roof we’re sitting under. Feeling very cosy and relaxed, our sandles left outside however are getting soaked.</p>
 							<figure>
-							<p><img class="diary-image" src="images\Diary Images\Krabi\Pool.jpg" alt="Merdeka Tower">
-							<figcaption>Well deserved pool break.</figcaption>
+								<p><img class="diary-image" src="images\Diary Images\Krabi\Gay Laptop.jpeg" alt="Merdeka Tower">
+								<figcaption>Alex on laptop, caption 'working hard or hardly working?</figcaption>
 							</figure>
 							<figure>
-							<p><img class="diary-image" src="images\Diary Images\Krabi\Roti.jpg" alt="Merdeka Tower">
-							<figcaption>Finally a sweet treat! Tasted like warm sugar glazed donuts.</figcaption>
+								<p><img class="diary-image" src="images\Diary Images\Krabi\Laptop Frown.jpg" alt="Merdeka Tower">
+								<figcaption>Hardly working.</figcaption>
 							</figure>
 						</div>
-					
 					
 					</div>				
 					

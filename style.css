@@ -388,6 +388,57 @@ polyline {
 	justify-content: space-between;
 }
 
+.switch {
+      display:flex;
+      top: 50%;
+      left: 20%;
+      width: 30%;
+      height: 25px;
+      text-align: center;
+      background: #828771;
+      transition: all 0.3s ease;
+      border-radius: 26px;
+    }
+
+input[type=radio] {
+      display: none;
+    }
+.switch label {
+      cursor: pointer;
+      color: rgba(0,0,0,0.2);
+      width: 180px;
+      line-height: 30px;
+      transition: all 0.2s ease;
+	  font-size: 16px;
+    }
+label[for=yes] {
+      left: 0px;
+      height: 20px;
+    }
+label[for=no] {
+      right: 0px;
+	  
+    }
+#no:checked ~ .switch {
+      background: #828771;
+    }
+#no:checked ~ .switch span {
+      background: #fff;
+      margin-left: -8px;
+    }
+#no:checked ~ .switch span:after {
+      background: #fff;
+      height: 20px;
+      margin-top: -8px;
+      margin-left: 8px;
+    }
+#yes:checked ~ .switch label[for=yes] {
+      color: #fff;
+    }
+#no:checked ~ .switch label[for=no] {
+      color: #fff;
+    }
+
 
 /* Diary entries */
 
@@ -404,7 +455,7 @@ polyline {
 }
 
 .diary-dates {
-	
+	margin-top: 10vh;
 }
 
 .diary-entries {
@@ -420,11 +471,28 @@ figure {
 	width: 40%;
 	text-align: center;
 	display: block;	
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10vh;
+	margin: 10vh auto 10vh auto;
 }
 
+.lone-image {
+	width: 40%; 
+	display: block; 
+	margin: 10vh auto 10vh auto;
+}
+
+.duel-image-1 {
+	width: 40%; 
+	display: float; 
+	margin: 5vh 3.5vw 10vh 3.5vw;
+	float: left;
+}
+
+.duel-image-2 {
+	width: 40%; 
+	display: float; 
+	margin: 5vh 3.5vw 10vh 3.5vw;
+	float: right;
+}
 
 
 
@@ -562,6 +630,153 @@ figure {
 	margin: 10px;
 	color: #6d413c;
 	text-decoration: none;
+}
+
+
+@media screen and (max-width: 920px) {
+	.diary-image {
+		width: 100%;
+		display: float;
+	}
+	
+	figure {
+		width: 40%;
+		text-align: center;
+		display: block;	
+		margin: 10vh auto 10vh auto;
+	}
+	
+	.lone-image {
+		width: 40%; 
+		display: block; 
+		margin: 10vh auto 10vh auto;
+	}
+
+	.duel-image-1 {
+		margin: 5vh 2vw 10vh 2vw;
+	}
+
+	.duel-image-2 {
+		margin: 5vh 2vw 10vh 2vw;
+	}
+	
+	.insta-links {
+		flex-direction: column;
+	}
+	
+	.tiktok-links {
+		flex-direction: column;
+	}
+	
+	.email-links {
+		flex-direction: column;
+	}
+	
+	.erin-insta {
+		font-size: 12px;
+	}
+	
+	.alex-insta {
+		font-size: 12px;
+	}
+	
+	.tiktok-link {
+		font-size: 11px;
+	}
+	
+	.email-link {
+		font-size: 11px;
+	}
+	
+	.list-header {
+		font-size: 18px;
+	}
+	
+	.country {
+		font-size: 13px;
+	}
+	
+	.month {
+		font-size: 13px;
+	}
+	
+	.diamond-country {
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-bottom-color: #565d3f;
+		position: relative;
+		top: -6px;
+	}
+
+	.diamond-country:after {
+		content: '';
+		position: absolute;
+		left: -6px;
+		top: 6px;
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-top-color: #565d3f;
+	}
+	
+	.diamond-month {
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-bottom-color: #6d413c;
+		position: relative;
+		top: -6px;
+	}
+
+	.diamond-month:after {
+		content: '';
+		position: absolute;
+		left: -6px;
+		top: 6px;
+		width: 0;
+		height: 0;
+		border: 6px solid transparent;
+		border-top-color: #6d413c;
+	}
+	
+	.continents-diarytitle, .diary-container {
+		width: 60%;
+	}
+	
+	.intro-section, .sticky-sidebar {
+		width: 40%;
+	}
+	
+	.flexbox-container-continents {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.switch {
+      display:flex;
+      top: 50%;
+      left: 20%;
+      width: 80%;
+      height: 25px;
+      text-align: center;
+      background: #828771;
+      transition: all 0.3s ease;
+      border-radius: 26px;
+    }
+
+	input[type=radio] {
+      display: none;
+    }
+	.switch label {
+      cursor: pointer;
+      color: rgba(0,0,0,0.2);
+      width: 200px;
+      line-height: 28px;
+      transition: all 0.2s ease;
+	  font-size: 20px;
+    }
+	
 }
 
 
@@ -740,102 +955,31 @@ figure {
 	figure {
 		font-size: 8px;
 	}
+	
+	.switch {
+      display:flex;
+      top: 50%;
+      left: 20%;
+      width: 65%;
+      height: 15px;
+      text-align: center;
+      background: #828771;
+      transition: all 0.3s ease;
+      border-radius: 26px;
+    }
+
+	input[type=radio] {
+      display: none;
+    }
+	.switch label {
+      cursor: pointer;
+      color: rgba(0,0,0,0.2);
+      width: 180px;
+      line-height: 15px;
+      transition: all 0.2s ease;
+	  font-size: 7px;
+    }
 }
 
-@media screen and (max-width: 920px) {
-	.insta-links {
-		flex-direction: column;
-	}
-	
-	.tiktok-links {
-		flex-direction: column;
-	}
-	
-	.email-links {
-		flex-direction: column;
-	}
-	
-	.erin-insta {
-		font-size: 12px;
-	}
-	
-	.alex-insta {
-		font-size: 12px;
-	}
-	
-	.tiktok-link {
-		font-size: 11px;
-	}
-	
-	.email-link {
-		font-size: 11px;
-	}
-	
-	.list-header {
-		font-size: 18px;
-	}
-	
-	.country {
-		font-size: 13px;
-	}
-	
-	.month {
-		font-size: 13px;
-	}
-	
-	.diamond-country {
-		width: 0;
-		height: 0;
-		border: 6px solid transparent;
-		border-bottom-color: #565d3f;
-		position: relative;
-		top: -6px;
-	}
-
-	.diamond-country:after {
-		content: '';
-		position: absolute;
-		left: -6px;
-		top: 6px;
-		width: 0;
-		height: 0;
-		border: 6px solid transparent;
-		border-top-color: #565d3f;
-	}
-	
-	.diamond-month {
-		width: 0;
-		height: 0;
-		border: 6px solid transparent;
-		border-bottom-color: #6d413c;
-		position: relative;
-		top: -6px;
-	}
-
-	.diamond-month:after {
-		content: '';
-		position: absolute;
-		left: -6px;
-		top: 6px;
-		width: 0;
-		height: 0;
-		border: 6px solid transparent;
-		border-top-color: #6d413c;
-	}
-	
-	.continents-diarytitle, .diary-container {
-		width: 60%;
-	}
-	
-	.intro-section, .sticky-sidebar {
-		width: 40%;
-	}
-	
-	.flexbox-container-continents {
-		flex-direction: column;
-		align-items: center;
-	}
-	
-}
 
 
