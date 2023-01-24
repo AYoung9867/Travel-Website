@@ -11,7 +11,8 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //adding marker
 
-const glenEtive = L.marker([48.61, 13.67], {
-}).addTo(mapEU)
+const alexRegalia = L.marker([3.164702, 101.693180]).addTo(mapAS);
 
-let 
+let template1 = '<img src="images/Map Images/Asia/Alex Regalia.jpg" alt="why" class="single-img" />'
+
+alexRegalia.bindPopup(template1); 
