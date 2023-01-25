@@ -1096,7 +1096,15 @@ figure {
 	
 	.dropdown-content {
 		font-size: 8px;
+		min-width: 100px;
 	}
+	
+	.dropdown-content-month {
+		font-size: 8px;
+		min-width: 100px;
+	}
+	
+	
 }
 
 
