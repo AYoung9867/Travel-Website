@@ -893,6 +893,32 @@ figure {
 	
 }
 
+@media screen and (max-width: 600px) {
+	.switch {
+      display:flex;
+      top: 50%;
+      left: 20%;
+      width: 65%;
+      height: 15px;
+      text-align: center;
+      background: #828771;
+      transition: all 0.3s ease;
+      border-radius: 26px;
+    }
+
+	input[type=radio] {
+      display: none;
+    }
+	.switch label {
+      cursor: pointer;
+      color: rgba(0,0,0,0.2);
+      width: 180px;
+      line-height: 15px;
+      transition: all 0.2s ease;
+	  font-size: 8px;
+    }
+}
+
 
 @media screen and (max-width: 500px) {
 	.coord{
@@ -1107,5 +1133,30 @@ figure {
 	
 }
 
+@media screen and (max-width: 300px) {
+	.switch {
+      display:flex;
+      top: 50%;
+      left: 20%;
+      width: 65%;
+      height: 10px;
+      text-align: center;
+      background: #828771;
+      transition: all 0.3s ease;
+      border-radius: 26px;
+    }
+
+	input[type=radio] {
+      display: none;
+    }
+	.switch label {
+      cursor: pointer;
+      color: rgba(0,0,0,0.2);
+      width: 180px;
+      line-height: 12px;
+      transition: all 0.2s ease;
+	  font-size: 4px;
+    }
+}
 
 
