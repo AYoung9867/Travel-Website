@@ -538,7 +538,7 @@ figure {
 .countries-list {
 	display: flex;
 	flex-direction: column;
-	margin-top: 20px;
+	border-top: 20px;
 	background-color: #c6bf90;
 }
 
