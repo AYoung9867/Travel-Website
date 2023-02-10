@@ -1094,6 +1094,28 @@ figure {
 	
 	figure {
 		font-size: 8px;
+		width: 80%;
+		text-align: center;
+		display: block;	
+		margin: 5vh auto 5vh auto;
+	}
+	
+	.lone-image {
+		width: 80%; 
+		display: block; 
+		margin: 5vh auto 5vh auto;
+	}
+
+	.duel-image-1 {
+		width: 80%; 
+		display: block; 
+		margin: 2vh 5vw 2vh 5vw;
+	}
+
+	.duel-image-2 {
+		width: 80%; 
+		display: block; 
+		margin: 2vh 5vw 2vh 5vw;
 	}
 	
 	.switch {
