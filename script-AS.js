@@ -13,7 +13,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const adoreCafe = L.marker([5.415287925036833, 100.33572591826787]).addTo(mapAS);
 
-let template1 = '<img src="images/Map Images/Asia/Malaysia/Adore Cafe/Guitar.jpg" alt="why" class="single-img" />'
+let template1 = '<div style="max-width: 20vw;"><img src="images/Map Images/Asia/Malaysia/Adore Cafe/Guitar.jpg" alt="why" class="single-img" /></div>'
 
 adoreCafe.bindPopup(template1);
 
@@ -128,3 +128,75 @@ const railey = L.marker([8.005112200764227, 98.83955889685177]).addTo(mapAS);
 let template19 = '<img src="images/Map Images/Asia/Thailand/Railey/Railey.jpg" alt="why" class="single-img" />'
 
 railey.bindPopup(template19);
+
+const emeraldPool = L.marker([7.925029631336609, 99.26681757733492]).addTo(mapAS);
+
+let template20 = '<img src="images/Map Images/Asia/Thailand/Emerald Pool/20230127_145837.jpg" alt="why" class="single-img" />'
+
+emeraldPool.bindPopup(template20);
+
+const hangoutNoi = L.marker([8.119150637407994, 98.56378283563639]).addTo(mapAS);
+
+let template21 = '<img src="images/Map Images/Asia/Thailand/Hangout Noi/20230202_164850.jpg" alt="why" class="single-img" />'
+
+hangoutNoi.bindPopup(template21);
+
+const krabiMainRoad = L.marker([8.066999493567518, 98.914764681937]).addTo(mapAS);
+
+let template22 = '<img src="images/Map Images/Asia/Thailand/Krabi Main Road/VideoCapture_20230201-225527.jpg" alt="why" class="single-img" />'
+
+krabiMainRoad.bindPopup(template22);
+
+const krabiMarket = L.marker([8.067137041508449, 98.91677961894486]).addTo(mapAS);
+
+let template23 = '<img src="images/Map Images/Asia/Thailand/Krabi Market/VideoCapture_20230126-213128.jpg" alt="why" class="single-img" />'
+
+krabiMarket.bindPopup(template23);
+
+const krabiTemple = L.marker([8.063152591848242, 98.9143944960289]).addTo(mapAS);
+
+let template24 = '<img src="images/Map Images/Asia/Thailand/Krabi Temple/20230126_170656.jpg" alt="why" class="single-img" />'
+
+krabiTemple.bindPopup(template24);
+
+const lamHaed = L.marker([8.082391496867137, 98.59876516470126]).addTo(mapAS);
+
+let template25 = '<img src="images/Map Images/Asia/Thailand/Lam Haed/White Beach.jpg" alt="why" class="single-img" />'
+
+lamHaed.bindPopup(template25);
+
+const monkeyIsland = L.marker([8.190619404288173, 98.72649396880824]).addTo(mapAS);
+
+let template26 = '<img src="images/Map Images/Asia/Thailand/Monkey Island/VideoCapture_20230124-134443.jpg" alt="why" class="single-img" />'
+
+monkeyIsland.bindPopup(template26);
+
+const oldTownPhuket = L.marker([7.884844818446742, 98.38777065876835]).addTo(mapAS);
+
+let template27 = '<img src="images/Map Images/Asia/Thailand/Old Town Phuket/20230129_183923.jpg" alt="why" class="single-img" />'
+
+oldTownPhuket.bindPopup(template27);
+
+const phuketCentre = L.marker([7.880264280344732, 98.39217973481202]).addTo(mapAS);
+
+let template28 = '<img src="images/Map Images/Asia/Thailand/Phuket Centre/20230131_182730.jpg" alt="why" class="single-img" />'
+
+phuketCentre.bindPopup(template28);
+
+const sunsetBeach = L.marker([8.129815648922182, 98.6233261937874]).addTo(mapAS);
+
+let template29 = '<img src="images/Map Images/Asia/Thailand/Sunset Beach/20230202_065859.jpg" alt="why" class="single-img" />'
+
+sunsetBeach.bindPopup(template29);
+
+const tigerCaves = L.marker([8.12622956803137, 98.92244879022189]).addTo(mapAS);
+
+let template30 = '<img src="images/Map Images/Asia/Thailand/Tiger Caves/20230127_102410.jpg" alt="why" class="single-img" />'
+
+tigerCaves.bindPopup(template30);
+
+const yaiBeach = L.marker([8.034828868032662, 98.563588919448]).addTo(mapAS);
+
+let template31 = '<img src="images/Map Images/Asia/Thailand/Yai Beach/VideoCapture_20230206-165133.jpg" alt="why" class="single-img" />'
+
+yaiBeach.bindPopup(template31);
