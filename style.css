@@ -1462,23 +1462,23 @@ figure {
       width: 180px;
       line-height: 15px;
       transition: all 0.2s ease;
-	  font-size: 9px;
+	  font-size: 8px;
     }
 	
 	.each-countries-container {
-		margin-top: 0.7vh;
+		margin-top: 0.6vh;
 	}
 	
 	.each-months-container {
-		margin-top: 0.7vh;
+		margin-top: 0.6vh;
 	}
 	
 	.country, .month {
-		font-size: 17px;
+		font-size: 15px;
 	}
 	
 	.list-header {
-		font-size: 25px;
+		font-size: 22px;
 	}
 	
 	
@@ -1601,27 +1601,27 @@ figure {
       width: 180px;
       line-height: 12px;
       transition: all 0.2s ease;
-	  font-size: 4px;
+	  font-size: 3px;
     }
 	
 	.each-countries-container {
-		margin-top: 0.5vh;
+		margin-top: 0.4vh;
 	}
 	
 	.each-months-container {
-		margin-top: 0.5vh;
+		margin-top: 0.4vh;
 	}
 	
 	.country, .month {
-		font-size: 11px;
+		font-size: 9px;
 	}
 	
 	.list-header {
-		font-size: 15px;
+		font-size: 13px;
 	}
 	
 	.dropdown-content-month a, .dropdown-content a {
-		font-size: 10px;
+		font-size: 9px;
 	}
 }
 
