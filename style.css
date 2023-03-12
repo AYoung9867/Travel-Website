@@ -4,6 +4,10 @@ body {
 	background-color: #fff4da; 
 }
 
+img {
+	max-width: 100%;
+}
+
 .diamond-country {
 	width: 0;
 	height: 0;
@@ -462,11 +466,15 @@ label[for=no] {
 
 /* Diary entries */
 
-.diary-container {
+.diary-sidebar .diary-container {
 	margin-top: 0px;
 	margin-right: 6%;
 	margin-left: 3%;
 	width: 80%;
+}
+
+.diary-sidebar.closed .diary-container {
+	width: 100%;
 }
 
 .diary-title {
@@ -500,39 +508,97 @@ figure {
 	margin: 10vh auto 10vh auto;
 }
 
-.duel-image-1 {
+.diary-sidebar .duel-image-1 {
 	width: 40%; 
 	display: float; 
-	margin: 5vh 3.5vw 10vh 3.5vw;
+	margin: 5vh 3.2vw 10vh 3.2vw;
 	float: left;
 }
 
-.duel-image-2 {
+.diary-sidebar.closed .duel-image-1 {
+	margin: 5vh 4.3vw 10vh 4.3vw;
+}
+
+.diary-sidebar .duel-image-2 {
 	width: 40%; 
 	display: float; 
-	margin: 5vh 3.5vw 10vh 3.5vw;
+	margin: 5vh 3.2vw 10vh 3.2vw;
 	float: right;
+}
+
+.diary-sidebar.closed .duel-image-2 {
+	margin: 5vh 4.3vw 10vh 4.3vw;
 }
 
 
 
 /*countries and months sidebar */
 
-.sticky-sidebar{
+.sidebar{
 	display: flex;
-	flex-direction: column;
-	width: 21%;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
-	margin-right: 2%;
 	margin-top: 10px;
 	height: 100vh;
-	overflow-y: scroll;
+	width: 26%;
+	transition: width 200ms ease-in-out;
 }
 
-.sticky-sidebar::-webkit-scrollbar {
+.diary-sidebar.closed .sidebar  {
+	width: 1.82%;
+}
+
+.sidebar-contents::-webkit-scrollbar {
 	display: none;
+}
+
+.diary-sidebar .slide-icon {
+	display: flex;
+	background-color: #c6bf90;
+	width: 7%;
+	margin: 40vh 0 40vh 0;
+	position: sticky;
+	border-radius: 50px 0 0 50px;
+	cursor: pointer;
+}
+
+.diary-sidebar.closed .slide-icon {
+	width: 100%;
+}
+
+.slide-icon:hover {
+	background-color: #c1bf90;
+	margin: 39vh 0 39vh 0;
+}
+
+.diary-sidebar .arrow-in {
+	position: absolute;
+	top: 45%;
+	margin-top: -20px;
+	margin-left: -7px;
+	width: 70px;
+	height: auto;
+	transition: transform 800ms ease-in-out;
+}
+
+.diary-sidebar.closed .arrow-in {
+	transform: rotate(180deg);
+	margin-left: -48px;
+	margin-top: -25px;
+}
+
+.diary-sidebar .sidebar-contents {
+	display: flex;
+	flex-direction: column;
+	overflow-y: scroll;
+	width: 93%;
+	border-radius: 20px 0 0 20px;
+	transition: width 200ms ease-out;
+}
+
+.diary-sidebar.closed .sidebar-contents {
+	width:0%;
 }
 
 .countries-list {
@@ -744,30 +810,98 @@ figure {
 
 
 @media screen and (max-width: 920px) {
-	.diary-image {
-		width: 100%;
-		display: float;
+	
+	.left {
+	  left: 4%;
+	}
+
+	.right {
+	  left: 96%;
 	}
 	
-	figure {
+	.diary-sidebar .diary-container {
+		width: 60%;
+		margin-right: 3%;
+	}
+
+	.diary-sidebar.closed .diary-container {
+		
+	}	
+
+	.sidebar{
+		display: flex;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		margin-top: 20px;
 		width: 40%;
-		text-align: center;
-		display: block;	
-		margin: 10vh auto 10vh auto;
+		transition: width 200ms ease-in-out;
+	}
+
+	.diary-sidebar.closed .sidebar  {
+		width: 3%;
+	}
+
+	.diary-sidebar .slide-icon {
+		display: flex;
+		background-color: #c6bf90;
+		width: 7%;
+		height: 20vh;
+		margin: 40vh 0 40vh 0;
+		position: sticky;
+		border-radius: 50px 0 0 50px;
+		cursor: pointer;
+	}
+
+	.diary-sidebar.closed .slide-icon {
+		width: 100%;
+	}
+
+	.slide-icon:hover {
+		background-color: #c1bf90;
+		margin: 39vh 0 39vh 0;
+	}
+
+	.diary-sidebar .arrow-in {
+		position: absolute;
+		top: 45%;
+		margin-top: -20px;
+		margin-left: -7px;
+		width: 70px;
+		height: auto;
+		transition: transform 800ms ease-in-out;
+	}
+
+	.diary-sidebar.closed .arrow-in {
+		transform: rotate(180deg);
+		margin-left: -48px;
+		margin-top: -25px;
+	}
+
+	.diary-sidebar .sidebar-contents {
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+		width: 93%;
+		border-radius: 20px 0 0 20px;
+		transition: width 200ms ease-out;
+	}
+
+	.diary-sidebar.closed .sidebar-contents {
+		width:0%;
 	}
 	
-	.lone-image {
-		width: 40%; 
-		display: block; 
-		margin: 10vh auto 10vh auto;
+	.diary-sidebar .lone-image {
+		width: 60%;
+		margin: 4vh auto;
 	}
 
-	.duel-image-1 {
-		margin: 5vh 2vw 10vh 2vw;
+	.diary-sidebar .duel-image-1 {
+		margin: 5vh 2.4vw;
 	}
 
-	.duel-image-2 {
-		margin: 5vh 2vw 10vh 2vw;
+	.diary-sidebar .duel-image-2 { 
+		margin: 5vh 2.4vw;
 	}
 	
 	.insta-links {
@@ -783,31 +917,31 @@ figure {
 	}
 	
 	.erin-insta {
-		font-size: 12px;
+		font-size: 22px;
 	}
 	
 	.alex-insta {
-		font-size: 12px;
+		font-size: 22px;
 	}
 	
 	.tiktok-link {
-		font-size: 11px;
+		font-size: 22px;
 	}
 	
 	.email-link {
-		font-size: 11px;
+		font-size: 22px;
 	}
 	
 	.list-header {
-		font-size: 18px;
+		font-size: 30px;
 	}
 	
 	.country {
-		font-size: 13px;
+		font-size: 25px;
 	}
 	
 	.month {
-		font-size: 13px;
+		font-size: 25px;
 	}
 	
 	.diamond-country {
@@ -816,7 +950,7 @@ figure {
 		border: 6px solid transparent;
 		border-bottom-color: #565d3f;
 		position: relative;
-		top: 6px;
+		top: 13px;
 	}
 
 	.diamond-country:after {
@@ -836,7 +970,7 @@ figure {
 		border: 6px solid transparent;
 		border-bottom-color: #6d413c;
 		position: relative;
-		top: 6px;
+		top: 13px;
 	}
 
 	.diamond-month:after {
@@ -850,17 +984,29 @@ figure {
 		border-top-color: #6d413c;
 	}
 	
-	.continents-diarytitle, .diary-container {
+	.each-countries-container {
+		margin-top: 1vh;
+	}
+	
+	.each-months-container {
+		margin-top: 1vh;
+	}
+	
+	.continents-diarytitle{
 		width: 60%;
 	}
 	
-	.intro-section, .sticky-sidebar {
+	.intro-section {
 		width: 40%;
 	}
 	
 	.flexbox-container-continents {
 		flex-direction: column;
 		align-items: center;
+	}
+	
+	.dropdown-content a {
+		font-size: 15px;
 	}
 	
 	.switch {
@@ -894,6 +1040,133 @@ figure {
 }
 
 @media screen and (max-width: 600px) {
+	
+	.left {
+	  left: 7%;
+	}
+
+	.right {
+	  left: 93%;
+	}
+		
+	.nav-links ul li a {
+		font-size: 12px;
+	}
+	
+	.diary-sidebar .diary-container {
+		width: 60%;
+	}
+
+	.diary-sidebar.closed .diary-container {
+
+	}	
+
+	.sidebar{
+		display: flex;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		margin-top: 20px;
+		width: 40%;
+		transition: width 200ms ease-in-out;
+	}
+
+	.diary-sidebar.closed .sidebar  {
+		width: 3%;
+	}
+
+	.diary-sidebar .slide-icon {
+		display: flex;
+		background-color: #c6bf90;
+		width: 7%;
+		height: 20vh;
+		margin: 40vh 0 40vh 0;
+		position: sticky;
+		border-radius: 50px 0 0 50px;
+		cursor: pointer;
+	}
+
+	.diary-sidebar.closed .slide-icon {
+		width: 100%;
+	}
+
+	.slide-icon:hover {
+		background-color: #c1bf90;
+		margin: 39vh 0 39vh 0;
+	}
+
+	.diary-sidebar .arrow-in {
+		position: absolute;
+		top: 45%;
+		margin-top: -20px;
+		margin-left: -7px;
+		width: 70px;
+		height: auto;
+		transition: transform 800ms ease-in-out;
+	}
+
+	.diary-sidebar.closed .arrow-in {
+		transform: rotate(180deg);
+		margin-left: -38px;
+		margin-top: -25px;
+		width: 50px;
+	}
+
+	.diary-sidebar .sidebar-contents {
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+		width: 93%;
+		border-radius: 20px 0 0 20px;
+		transition: width 200ms ease-out;
+	}
+
+	.diary-sidebar.closed .sidebar-contents {
+		width:0%;
+	}
+	
+	.diary-sidebar .lone-image {
+		width: 60%;
+		margin: 4vh auto;
+	}
+
+	.diary-sidebar .duel-image-1 {
+		margin: 5vh 2.4vw;
+	}
+
+	.diary-sidebar .duel-image-2 { 
+		margin: 5vh 2.4vw;
+	}
+	
+		.erin-insta {
+		font-size: 18px;
+	}
+	
+	.alex-insta {
+		font-size: 18px;
+	}
+	
+	.tiktok-link {
+		font-size: 18px;
+	}
+	
+	.email-link {
+		font-size: 15px;
+	}
+	
+	.list-header {
+		font-size: 25px;
+	}
+	
+	.country {
+		font-size: 20px;
+	}
+	
+	.month {
+		font-size: 20px;
+	}
+	
+	
 	.switch {
       display:flex;
       top: 50%;
@@ -921,6 +1194,98 @@ figure {
 
 
 @media screen and (max-width: 500px) {
+	
+	.diary-sidebar .diary-container {
+		width: 50%;
+	}
+
+	.diary-sidebar.closed .diary-container {
+
+	}	
+
+	.sidebar{
+		display: flex;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		margin-top: 20px;
+		width: 50%;
+		transition: width 200ms ease-in-out;
+	}
+
+	.diary-sidebar.closed .sidebar  {
+		width: 5%;
+	}
+
+	.diary-sidebar .slide-icon {
+		display: flex;
+		background-color: #c6bf90;
+		width: 10%;
+		height: 20vh;
+		margin: 40vh 0 40vh 0;
+		position: sticky;
+		border-radius: 50px 0 0 50px;
+		cursor: pointer;
+	}
+
+	.diary-sidebar.closed .slide-icon {
+		width: 100%;
+	}
+
+	.slide-icon:hover {
+		background-color: #c1bf90;
+		margin: 39vh 0 39vh 0;
+	}
+
+	.diary-sidebar .arrow-in {
+		position: absolute;
+		top: 45%;
+		margin-top: -20px;
+		margin-left: -8px;
+		width: 45px;
+		height: auto;
+		transition: transform 800ms ease-in-out;
+	}
+
+	.diary-sidebar.closed .arrow-in {
+		transform: rotate(180deg);
+		margin-left: -33px;
+		margin-top: -25px;
+		width: 45px;
+	}
+
+	.diary-sidebar .sidebar-contents {
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+		width: 90%;
+		border-radius: 20px 0 0 20px;
+		transition: width 200ms ease-out;
+	}
+
+	.diary-sidebar.closed .sidebar-contents {
+		width:0%;
+	}
+	
+	.diary-sidebar .lone-image {
+		width: 60%;
+		margin: 4vh auto;
+	}
+
+	.diary-sidebar .duel-image-1 {
+		margin: 5vh 1.8vw;
+	}
+
+	.diary-sidebar .duel-image-2 { 
+		margin: 5vh 1.8vw;
+	}
+	
+	figcaption {
+		font-size: 10px;
+	}
+	
+	
+	
 	.coord{
 	font-size: 8px;
 	}
@@ -967,16 +1332,12 @@ figure {
 		align-items: center;
 	}
 	
-	.continents-diarytitle, .diary-container {
+	.continents-diarytitle {
 		width: 60%;
 	}
 	
-	.intro-section, .sticky-sidebar {
+	.intro-section {
 		width: 40%;
-	}
-	
-	.outer-container {
-
 	}
 	
 	.intro {
@@ -1071,20 +1432,8 @@ figure {
 		font-size: 10px;
 	}
 	
-	.left-side-container {
-	display: flex;
-	flex-direction: column;
-	width: 80%;
-	}
-	
 	.diary-dates {
 		font-size: 15px;
-	}
-
-	.diary-container {
-		margin-top: 25px;
-		margin-right: 10%;
-		margin-left: 3%;
 	}
 	
 	.diary-title {
@@ -1092,38 +1441,12 @@ figure {
 		color: #8D6B67;
 	}
 	
-	figure {
-		font-size: 8px;
-		width: 80%;
-		text-align: center;
-		display: block;	
-		margin: 5vh auto 5vh auto;
-	}
-	
-	.lone-image {
-		width: 80%; 
-		display: block; 
-		margin: 5vh auto 5vh auto;
-	}
-
-	.duel-image-1 {
-		width: 80%; 
-		display: block; 
-		margin: 2vh 5vw 2vh 5vw;
-	}
-
-	.duel-image-2 {
-		width: 80%; 
-		display: block; 
-		margin: 2vh 5vw 2vh 5vw;
-	}
-	
 	.switch {
       display:flex;
       top: 50%;
       left: 20%;
-      width: 65%;
-      height: 15px;
+      width: 100%;
+      height: 13px;
       text-align: center;
       background: #828771;
       transition: all 0.3s ease;
@@ -1139,23 +1462,124 @@ figure {
       width: 180px;
       line-height: 15px;
       transition: all 0.2s ease;
-	  font-size: 5px;
+	  font-size: 9px;
     }
 	
-	.dropdown-content {
-		font-size: 8px;
-		min-width: 100px;
+	.each-countries-container {
+		margin-top: 0.7vh;
 	}
 	
-	.dropdown-content-month {
-		font-size: 8px;
-		min-width: 100px;
+	.each-months-container {
+		margin-top: 0.7vh;
+	}
+	
+	.country, .month {
+		font-size: 17px;
+	}
+	
+	.list-header {
+		font-size: 25px;
 	}
 	
 	
 }
 
 @media screen and (max-width: 300px) {
+	
+	.left {
+		left: 10%;
+	}
+	
+	.right {
+		left: 93%; 
+	}
+	
+	.diary-sidebar .diary-container {
+		width: 50%;
+	}
+
+	.diary-sidebar.closed .diary-container {
+
+	}	
+
+	.sidebar{
+		display: flex;
+		position: -webkit-sticky;
+		position: sticky;
+		top: 0;
+		margin-top: 20px;
+		width: 50%;
+		transition: width 200ms ease-in-out;
+	}
+
+	.diary-sidebar.closed .sidebar  {
+		width: 5%;
+	}
+
+	.diary-sidebar .slide-icon {
+		display: flex;
+		background-color: #c6bf90;
+		width: 10%;
+		height: 20vh;
+		margin: 40vh 0 40vh 0;
+		position: sticky;
+		border-radius: 50px 0 0 50px;
+		cursor: pointer;
+	}
+
+	.diary-sidebar.closed .slide-icon {
+		width: 100%;
+	}
+
+	.slide-icon:hover {
+		background-color: #c1bf90;
+		margin: 39vh 0 39vh 0;
+	}
+
+	.diary-sidebar .arrow-in {
+		position: absolute;
+		top: 50%;
+		margin-top: -20px;
+		margin-left: -8px;
+		width: 35px;
+		height: auto;
+		transition: transform 800ms ease-in-out;
+	}
+
+	.diary-sidebar.closed .arrow-in {
+		transform: rotate(180deg);
+		margin-left: -25px;
+		margin-top: -25px;
+		width: 35px;
+	}
+
+	.diary-sidebar .sidebar-contents {
+		display: flex;
+		flex-direction: column;
+		overflow-y: scroll;
+		width: 90%;
+		border-radius: 20px 0 0 20px;
+		transition: width 200ms ease-out;
+	}
+
+	.diary-sidebar.closed .sidebar-contents {
+		width:0%;
+	}
+	
+	.diary-sidebar .lone-image {
+		width: 60%;
+		margin: 4vh auto;
+	}
+
+	.diary-sidebar .duel-image-1 {
+		margin: 5vh 1.8vw;
+	}
+
+	.diary-sidebar .duel-image-2 { 
+		margin: 5vh 1.8vw;
+	}	
+	
+	
 	.switch {
       display:flex;
       top: 50%;
@@ -1179,6 +1603,26 @@ figure {
       transition: all 0.2s ease;
 	  font-size: 4px;
     }
+	
+	.each-countries-container {
+		margin-top: 0.5vh;
+	}
+	
+	.each-months-container {
+		margin-top: 0.5vh;
+	}
+	
+	.country, .month {
+		font-size: 11px;
+	}
+	
+	.list-header {
+		font-size: 15px;
+	}
+	
+	.dropdown-content-month a, .dropdown-content a {
+		font-size: 10px;
+	}
 }
 
 

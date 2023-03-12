@@ -68,6 +68,19 @@ function altSortChildrenDivsById(parentId) {
      }
 }
 
+//Disappearing Sidebar
+
+function sideBarToggle() {
+	var element = document.getElementById("sidebar-toggle");
+	element.classList.toggle("closed");
+}
+
+var sidebarButton = document.getElementById("sidebar-btn");
+sidebarButton.addEventListener("click", sideBarToggle);
+
+var monthButtons = document.getElementsByClassName("month-button");
+monthButtons.onclick = sideBarToggle;
+
 
 //Dropdowns
 
