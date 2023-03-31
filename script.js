@@ -170,6 +170,10 @@ function dropFunction20() {
   document.getElementById("myDropdown20").classList.toggle("show");
 }
 
+function dropFunction21() {
+  document.getElementById("myDropdown21").classList.toggle("show");
+}
+
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
@@ -182,3 +186,4 @@ window.onclick = function(event) {
     }
   }
 }
+
