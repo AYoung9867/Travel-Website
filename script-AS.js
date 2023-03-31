@@ -202,20 +202,12 @@ let template31 = '<img src="images/Map Images/Asia/Thailand/Yai Beach/VideoCaptu
 yaiBeach.bindPopup(template31);
 */
 
-
-/*function plotAccom(Name, Latitude, Longitude) {
-	for (i=0, len = THELIST.length; i<len; i++) {
-		L.marker([Latitude[i], Longitude[i]]).addTo(mapAS);
-	}
-}*/
-
 const url ='https://script.google.com/macros/s/AKfycbyDtMDn8lqH-BD7f0hGbZgO2GJhgcY0DMp8blB4P-YgsuDZRseo27d4tnRxl1gLotfepw/exec';
 const accom = document.querySelector('.accom');
 accom.onclick = (e)=>{
 	fetch(url)
 	.then(rep => rep.json())
 	.then(data =>{
-		console.log(data);
 		const headings = data[0];
 		const rows = data.slice(1);
 		for (i=0, len = rows.length; i<len; i++) {
@@ -226,14 +218,19 @@ accom.onclick = (e)=>{
 
 
 function plotAccom(Name, Latitude, Longitude) {
-	
 	const pin = L.marker([Latitude,Longitude]).addTo(mapAS);
-	
 	const template = "<h2>"+Name+"</h2>"
-
 	pin.bindPopup(template);
-
 }
+
+
+
+function classToggle() {
+	console.log("HELLO");
+	document.getElementById('accom1').className = "accomlit";
+}
+
+
 
 
 

@@ -95,6 +95,10 @@ button:hover {
 	margin-top: 25px;
 }
 
+.accomlit {
+	background-color: #7b13aa;
+}
+
 .accom:active {
 	background-color: #7b13aa;
 }
