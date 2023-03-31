@@ -32,17 +32,6 @@ body, html {
 	width: 100%;
 	height: 100%
 	}
-	
-I am trying to build my portfolio. I want to add my picture to about me section. Although I do not get any errors, only the image icon shows up on the website
-
-image
-
-and Here is my code for js:
-
-            <div className="about__img">
-                <img src="./images/br.jpg" class="me"/>
-            </div>
-I also tried uploading from image folder by using relative path and this is for css
 
 .me{
   position: relative;
@@ -67,6 +56,61 @@ I also tried uploading from image folder by using relative path and this is for 
 }
 
 .single-img {
-	width:15vw; 
+	max-width:20vw; 
 	display: absolute;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+.key {
+	z-index: 2;
+	position: absolute;
+	flex-direction: column;
+	background-color: rgb(255, 207, 93, 0.7);
+	margin: 15vh 3vw;
+	width: 10%;
+	border-radius: 20px;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+}
+
+button {
+	margin: 10px;
+	border: 2px solid #ffc25d;
+	border-radius: 20px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+button:hover {
+	color: white;
+}
+
+.accom {
+	margin-top: 25px;
+}
+
+.accom:active {
+	background-color: #7b13aa;
+}
+
+.food {
+	
+}
+
+.misc {
+	margin-bottom: 25px;
+}
+
+
+
+@media screen and (max-width: 500px) {
+	.single-img {
+		max-width: 30vw;
+	}
 }

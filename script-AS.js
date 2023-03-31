@@ -11,7 +11,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //Malaysia
 
-const adoreCafe = L.marker([5.415287925036833, 100.33572591826787]).addTo(mapAS);
+/*const adoreCafe = L.marker([5.415287925036833, 100.33572591826787]).addTo(mapAS);
 
 let template1 = '<div style="max-width: 20vw;"><img src="images/Map Images/Asia/Malaysia/Adore Cafe/Guitar.jpg" alt="why" class="single-img" /></div>'
 
@@ -200,3 +200,41 @@ const yaiBeach = L.marker([8.034828868032662, 98.563588919448]).addTo(mapAS);
 let template31 = '<img src="images/Map Images/Asia/Thailand/Yai Beach/VideoCapture_20230206-165133.jpg" alt="why" class="single-img" />'
 
 yaiBeach.bindPopup(template31);
+*/
+
+
+/*function plotAccom(Name, Latitude, Longitude) {
+	for (i=0, len = THELIST.length; i<len; i++) {
+		L.marker([Latitude[i], Longitude[i]]).addTo(mapAS);
+	}
+}*/
+
+const url ='https://script.google.com/macros/s/AKfycbyDtMDn8lqH-BD7f0hGbZgO2GJhgcY0DMp8blB4P-YgsuDZRseo27d4tnRxl1gLotfepw/exec';
+const accom = document.querySelector('.accom');
+accom.onclick = (e)=>{
+	fetch(url)
+	.then(rep => rep.json())
+	.then(data =>{
+		console.log(data);
+		const headings = data[0];
+		const rows = data.slice(1);
+		for (i=0, len = rows.length; i<len; i++) {
+			plotAccom(rows[i][0],rows[i][2],rows[i][3]);
+		}
+	})
+}
+
+
+function plotAccom(Name, Latitude, Longitude) {
+	
+	const pin = L.marker([Latitude,Longitude]).addTo(mapAS);
+	
+	const template = "<h2>"+Name+"</h2>"
+
+	pin.bindPopup(template);
+
+}
+
+
+
+ 
